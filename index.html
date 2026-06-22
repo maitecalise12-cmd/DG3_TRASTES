@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VETA — Lutería de autor, instrumentos a medida</title>
+<meta name="description" content="VETA es un taller de lutería de autor. Narramos el nacimiento de un instrumento, desde la madera en bruto hasta la primera nota. Instrumentos a medida, hechos a mano.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Indicador fijo de anillos de crecimiento -->
+<div class="ring-tracker" aria-hidden="true">
+  <svg viewBox="0 0 120 120" class="ring-tracker__svg">
+    <circle class="ring-tracker__track" cx="60" cy="60" r="52"/>
+    <circle class="ring-tracker__fill" cx="60" cy="60" r="52"/>
+    <circle cx="60" cy="60" r="38" class="ring-tracker__inner"/>
+    <circle cx="60" cy="60" r="24" class="ring-tracker__inner"/>
+  </svg>
+  <p class="ring-tracker__label">
+    <span class="ring-tracker__step">00</span>
+    <span class="ring-tracker__text">La semilla del sonido</span>
+  </p>
+</div>
+
+<header class="site-header" data-animate="fade-down">
+  <a href="#inicio" class="logo">VETA<span class="logo__mark">·</span></a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="primary-nav" class="primary-nav">
+    <a href="#origen">Origen</a>
+    <a href="#boceto">Boceto</a>
+    <a href="#corte">Corte</a>
+    <a href="#ensamblaje">Ensamblaje</a>
+    <a href="#a-medida">A Medida</a>
+    <a href="#nacimiento">Nacimiento</a>
+    <a href="#a-medida" class="nav-cta">Solicitar instrumento</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- 1. HERO -->
+  <section id="inicio" class="section section--hero" data-section-index="0" data-section-label="La semilla del sonido">
+    <div class="grain-field" aria-hidden="true">
+      <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+        <g class="grain-rings">
+          <circle cx="400" cy="900" r="120"/><circle cx="400" cy="900" r="200"/>
+          <circle cx="400" cy="900" r="280"/><circle cx="400" cy="900" r="360"/>
+          <circle cx="400" cy="900" r="440"/><circle cx="400" cy="900" r="520"/>
+          <circle cx="400" cy="900" r="600"/><circle cx="400" cy="900" r="680"/>
+        </g>
+      </svg>
+    </div>
+    <div class="section__inner hero__inner">
+      <p class="eyebrow" data-animate="fade-up">Lutería de autor — Taller VETA</p>
+      <h1 data-animate="fade-up" data-delay="1">Antes de ser<br><em>instrumento</em>,<br>fue un árbol.</h1>
+      <p class="hero__lede" data-animate="fade-up" data-delay="2">
+        Cada veta cuenta una estación, cada nudo una resistencia que la madera tuvo que vencer.
+        Acá no fabricamos instrumentos: dejamos que uno termine de nacer. Bajá para ver el proceso,
+        desde el tronco hasta la primera nota.
+      </p>
+      <a href="#origen" class="scroll-cue" data-animate="fade-up" data-delay="3">
+        <span>Empezar el recorrido</span>
+        <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v19M1 14l6 6 6-6" stroke="currentColor" stroke-width="1.4"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- 2. ORIGEN — LA MADERA -->
+  <section id="origen" class="section section--wood" data-section-index="1" data-section-label="Selección de la madera">
+    <div class="section__inner">
+      <p class="eyebrow" data-animate="fade-up">01 — El origen</p>
+      <h2 data-animate="fade-up">La madera elige antes de que el luthier decida.</h2>
+      <p class="section__text" data-animate="fade-up" data-delay="1">
+        Un tronco puede esperar quince años antes de convertirse en algo. Lo abrimos, leemos su veta a contraluz
+        y descartamos casi todo: solo una fracción de cada partida tiene la densidad, la elasticidad y el silencio
+        necesarios para vibrar bien. Elegir la madera correcta es, en gran parte, decidir cómo va a sonar un
+        instrumento que todavía no existe.
+      </p>
+
+      <div class="wood-grid" data-animate="fade-up" data-delay="2">
+        <article class="wood-card wood-card--palosanto">
+          <div class="wood-card__swatch" aria-hidden="true"></div>
+          <h3>Palosanto Río</h3>
+          <dl class="spec-list">
+            <div><dt>Procedencia</dt><dd>Bahía, Brasil</dd></div>
+            <div><dt>Densidad</dt><dd>1,15 g/cm³</dd></div>
+            <div><dt>Uso</dt><dd>Aros y fondo</dd></div>
+            <div><dt>Carácter</dt><dd>Graves profundos, brillo cristalino en agudos</dd></div>
+          </dl>
+        </article>
+        <article class="wood-card wood-card--ebano">
+          <div class="wood-card__swatch" aria-hidden="true"></div>
+          <h3>Ébano de Madagascar</h3>
+          <dl class="spec-list">
+            <div><dt>Procedencia</dt><dd>Región de Toliara</dd></div>
+            <div><dt>Densidad</dt><dd>1,08 g/cm³</dd></div>
+            <div><dt>Uso</dt><dd>Diapasón y puente</dd></div>
+            <div><dt>Carácter</dt><dd>Dureza extrema, sostiene la afinación bajo tensión</dd></div>
+          </dl>
+        </article>
+        <article class="wood-card wood-card--ovangkol">
+          <div class="wood-card__swatch" aria-hidden="true"></div>
+          <h3>Ovangkol</h3>
+          <dl class="spec-list">
+            <div><dt>Procedencia</dt><dd>Cuenca del Congo</dd></div>
+            <div><dt>Densidad</dt><dd>0,82 g/cm³</dd></div>
+            <div><dt>Uso</dt><dd>Mástil y filetes</dd></div>
+            <div><dt>Carácter</dt><dd>Punto medio entre la calidez del caoba y el brillo del palosanto</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. BOCETO — DISEÑO ERGONÓMICO -->
+  <section id="boceto" class="section section--blueprint" data-section-index="2" data-section-label="Diseño ergonómico">
+    <div class="section__inner section__inner--split">
+      <div class="blueprint__text">
+        <p class="eyebrow" data-animate="fade-up">02 — El boceto</p>
+        <h2 data-animate="fade-up">Un instrumento se diseña alrededor de un cuerpo, no al revés.</h2>
+        <p class="section__text" data-animate="fade-up" data-delay="1">
+          Antes de cortar nada, medimos la mano que va a tocarlo: largo de dedos, ángulo de muñeca, altura,
+          postura habitual. El escalado del mástil, el radio del diapasón y el grosor del cuerpo se ajustan
+          a esa anatomía específica. No existe una "talla única" en un instrumento bien hecho.
+        </p>
+        <ul class="check-list" data-animate="fade-up" data-delay="2">
+          <li>Longitud de escala calculada según la mano del músico</li>
+          <li>Perfil de mástil moldeado a partir de un molde de la palma</li>
+          <li>Ángulo de inclinación pensado para la postura real de ejecución</li>
+        </ul>
+      </div>
+      <div class="blueprint__diagram" aria-hidden="true" data-animate="fade-up" data-delay="2">
+        <svg viewBox="0 0 420 560">
+          <rect x="6" y="6" width="408" height="548" class="bp-frame"/>
+          <line x1="40" y1="40" x2="40" y2="520" class="bp-dim"/>
+          <line x1="32" y1="40" x2="48" y2="40" class="bp-dim"/>
+          <line x1="32" y1="520" x2="48" y2="520" class="bp-dim"/>
+          <text x="50" y="280" class="bp-label" transform="rotate(-90 50 280)">650 mm escala</text>
+          <path d="M150 60 C 110 140, 110 220, 150 300 L150 460 C150 490 180 500 210 500 C240 500 270 490 270 460 L270 300 C310 220 310 140 270 60 Z" class="bp-body"/>
+          <circle cx="210" cy="120" r="46" class="bp-hole"/>
+          <line x1="210" y1="60" x2="210" y2="500" class="bp-center"/>
+          <text x="290" y="120" class="bp-label">⌀ 92 mm</text>
+          <text x="290" y="400" class="bp-label">cintura 250 mm</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CORTE — PRECISIÓN DE LAS HERRAMIENTAS -->
+  <section id="corte" class="section section--tools" data-section-index="3" data-section-label="El corte">
+    <div class="section__inner">
+      <p class="eyebrow" data-animate="fade-up">03 — El corte</p>
+      <h2 data-animate="fade-up">Cada filo decide algo que ya no se puede deshacer.</h2>
+      <p class="section__text" data-animate="fade-up" data-delay="1">
+        A diferencia de una máquina, una gubia siente la dirección de la fibra antes de que el ojo la vea.
+        Trabajamos con un calibre que rara vez supera el medio milímetro de margen: lo suficiente para que
+        una tapa armónica de 2,4&nbsp;mm no se rompa, y lo suficiente para que vibre.
+      </p>
+
+      <div class="tool-row" data-animate="fade-up" data-delay="2">
+        <div class="tool-card">
+          <svg viewBox="0 0 64 64" class="tool-icon"><path d="M10 54 L46 18 L52 24 L16 60 Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M46 18 L54 10" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Gubias</h3>
+          <p>Para tallar el contorno del clavijero y los rebajes internos, fibra a fibra.</p>
+        </div>
+        <div class="tool-card">
+          <svg viewBox="0 0 64 64" class="tool-icon"><rect x="8" y="28" width="44" height="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M52 32 L60 24 M52 32 L60 40" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Formones</h3>
+          <p>Ajustan el encaje del mástil al cuerpo con tolerancia de décimas de milímetro.</p>
+        </div>
+        <div class="tool-card">
+          <svg viewBox="0 0 64 64" class="tool-icon"><path d="M6 40 L58 40" stroke="currentColor" stroke-width="2"/><path d="M10 40 L18 24 L26 40 L34 24 L42 40 L50 24 L58 40" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <h3>Serrucho de costilla</h3>
+          <p>Corta los bloques de la tapa antes del desbastado, siguiendo la veta y nunca contra ella.</p>
+        </div>
+        <div class="tool-card">
+          <svg viewBox="0 0 64 64" class="tool-icon"><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="2"/><path d="M32 16v32M16 32h32" stroke="currentColor" stroke-width="1.4"/></svg>
+          <h3>Calibre de precisión</h3>
+          <p>Mide el grosor de la tapa en quince puntos distintos antes de aprobarla.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ENSAMBLAJE — MESES DE ESPERA -->
+  <section id="ensamblaje" class="section section--assembly" data-section-index="4" data-section-label="Ensamblaje y secado">
+    <div class="section__inner">
+      <p class="eyebrow" data-animate="fade-up">04 — El ensamblaje</p>
+      <h2 data-animate="fade-up">Lo que más tarda no es cortar: es esperar.</h2>
+      <p class="section__text" data-animate="fade-up" data-delay="1">
+        Entre el encolado de los aros y el barnizado final hay semanas en las que no pasa nada visible.
+        La cola necesita curar, la madera necesita estabilizarse a la humedad del taller, el barniz necesita
+        secar en capas que se cuentan por docenas. Apurar cualquiera de esas pausas se nota para siempre en
+        cómo responde el instrumento.
+      </p>
+
+      <ol class="timeline" data-animate="fade-up" data-delay="2">
+        <li><span class="timeline__week">Semana 1–2</span><p>Encolado de aros y fondo, prensado en molde.</p></li>
+        <li><span class="timeline__week">Semana 3–6</span><p>Estabilización de la madera a la humedad ambiente del taller.</p></li>
+        <li><span class="timeline__week">Semana 7–10</span><p>Tallado de mástil, encaje de diapasón, primer armado en seco.</p></li>
+        <li><span class="timeline__week">Semana 11–16</span><p>Barnizado en capas finas, con días de secado entre cada mano.</p></li>
+        <li><span class="timeline__week">Semana 17–18</span><p>Encordado de prueba, ajuste de acción y primera vibración real.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 6. INSTRUMENTO A MEDIDA — PÁGINA DE DETALLE DEL SERVICIO -->
+  <section id="a-medida" class="section section--custom" data-section-index="5" data-section-label="Tu instrumento">
+    <div class="section__inner">
+      <p class="eyebrow" data-animate="fade-up">Servicio</p>
+      <h2 data-animate="fade-up">Instrumento a Medida <span class="custom__sub">(Custom Build)</span></h2>
+      <p class="section__text section__text--lg" data-animate="fade-up" data-delay="1">
+        No partimos de un modelo de catálogo. Partimos de tu mano, tu oído y el sonido que tenés en la
+        cabeza pero todavía no podés tocar. El proceso de un instrumento a medida es el mismo que narramos
+        arriba, aplicado por completo a un solo músico: vos.
+      </p>
+
+      <div class="process">
+        <article class="process__step" data-animate="fade-up" data-delay="1">
+          <span class="process__num">01</span>
+          <h3>Diagnóstico sonoro</h3>
+          <p>Una conversación a fondo sobre el sonido que buscás, los géneros que tocás y los instrumentos que ya pasaron por tus manos.</p>
+        </article>
+        <article class="process__step" data-animate="fade-up" data-delay="2">
+          <span class="process__num">02</span>
+          <h3>Selección de materiales</h3>
+          <p>Elegimos en conjunto las maderas, herrajes y acabados de nuestro stock curado, explicando cómo cada elección afecta al sonido final.</p>
+        </article>
+        <article class="process__step" data-animate="fade-up" data-delay="3">
+          <span class="process__num">03</span>
+          <h3>Diseño ergonómico</h3>
+          <p>Tomamos medidas de tu mano y tu postura para definir escala, perfil de mástil y forma del cuerpo a tu medida exacta.</p>
+        </article>
+        <article class="process__step" data-animate="fade-up" data-delay="4">
+          <span class="process__num">04</span>
+          <h3>Construcción artesanal</h3>
+          <p>El instrumento se construye en banco, a mano, con las herramientas y los tiempos de secado que viste en las secciones anteriores.</p>
+        </article>
+        <article class="process__step" data-animate="fade-up" data-delay="5">
+          <span class="process__num">05</span>
+          <h3>Ajuste y entrega</h3>
+          <p>Encordamos, ajustamos la acción y tocamos el instrumento con vos antes de que se vaya del taller.</p>
+        </article>
+      </div>
+
+      <div class="custom__footer" data-animate="fade-up" data-delay="2">
+        <div class="custom__meta">
+          <div><span class="meta__num">4–7</span><span class="meta__label">meses de trabajo artesanal</span></div>
+          <div><span class="meta__num">1</span><span class="meta__label">instrumento, un solo músico</span></div>
+          <div><span class="meta__num">100%</span><span class="meta__label">decisiones tomadas en conjunto</span></div>
+        </div>
+        <a href="mailto:taller@veta-instrumentos.com" class="btn-primary">Solicitar instrumento a medida</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. NACIMIENTO — PRIMERA NOTA -->
+  <section id="nacimiento" class="section section--birth" data-section-index="6" data-section-label="La primera nota">
+    <div class="grain-field grain-field--top" aria-hidden="true">
+      <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+        <g class="grain-rings grain-rings--light">
+          <circle cx="400" cy="-100" r="120"/><circle cx="400" cy="-100" r="200"/>
+          <circle cx="400" cy="-100" r="280"/><circle cx="400" cy="-100" r="360"/>
+          <circle cx="400" cy="-100" r="440"/><circle cx="400" cy="-100" r="520"/>
+        </g>
+      </svg>
+    </div>
+    <div class="section__inner">
+      <p class="eyebrow" data-animate="fade-up">05 — El nacimiento</p>
+      <h2 data-animate="fade-up">La primera nota no se toca: se confirma.</h2>
+      <p class="section__text" data-animate="fade-up" data-delay="1">
+        Después de meses de espera, el barniz seca, las cuerdas se tensan por primera vez y el instrumento
+        responde. No hay manera de simular ese momento de antemano: es la única prueba real de que cada
+        decisión, desde la veta del tronco hasta el ángulo del mástil, estaba bien tomada. A partir de ahí,
+        el instrumento ya no es nuestro. Es tuyo, y va a seguir envejeciendo con cada mano que lo toque.
+      </p>
+      <a href="#a-medida" class="btn-secondary" data-animate="fade-up" data-delay="2">Empezar el tuyo</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" data-animate="fade-up">
+  <div class="site-footer__inner">
+    <p class="logo logo--footer">VETA<span class="logo__mark">·</span></p>
+    <div class="site-footer__contact">
+      <p>Taller de lutería de autor</p>
+      <a href="mailto:taller@veta-instrumentos.com">taller@veta-instrumentos.com</a>
+    </div>
+    <p class="site-footer__note">Cada instrumento que sale del taller tarda más en hacerse de lo que tarda en sonar para siempre.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
