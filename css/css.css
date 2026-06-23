@@ -3,7 +3,7 @@
    Inspirada en el minimalismo de QuiteNice e identidades de lujo como Hardgraft
    ========================================================================== */
 
-/* Variables del Sistema - Basadas estrictamente en el Brief */
+/* Variables del Sistema - Basadas estrictamente en tu Brief */
 :root {
     --bg-main: #E2D3C0;       /* Fondo principal artesanal / orgánico */
     --text-main: #000000;     /* Tipografía y sofisticación contrastante */
@@ -316,7 +316,7 @@ body {
     opacity: 0.7;
 }
 
-/* 4. PRODUCTO / MATERIALIDAD (CARDS ASIMÉTRICAS) */
+/* 4. PRODUCTO / MATERIALIDAD */
 .materiality-section {
     padding: var(--whitespace-gap) 0;
 }
@@ -446,7 +446,7 @@ body {
     line-height: 1.7;
 }
 
-/* 6. DIFERENCIAL */
+/* 6. DIFERENCIAL (Dark UX) */
 .differential-section {
     padding: 10rem 0;
     background-color: #1a1816; /* Toque Dark UX selectivo para romper monotonía */
@@ -476,7 +476,7 @@ body {
     margin: 0 auto;
 }
 
-/* 7. PERSONALIZACIÓN / CUSTOM BUILD INTERACTIVE SIM */
+/* 7. PERSONALIZACIÓN / CUSTOM BUILD */
 .custom-section {
     padding: var(--whitespace-gap) 0;
 }
@@ -601,7 +601,7 @@ body {
     margin-top: 1rem;
 }
 
-/* 8. SOCIAL PROOF (Elegante, Sin sobrecarga) */
+/* 8. SOCIAL PROOF */
 .testimonials-section {
     padding: var(--whitespace-gap) 0;
     background-color: rgba(0,0,0,0.02);
@@ -701,10 +701,9 @@ body {
 }
 
 /* ==========================================================================
-   SISTEMA DE ANIMACIONES DELUXE (Inspirado en QuiteNice)
+   SISTEMA DE ANIMACIONES DELUXE
    ========================================================================== */
 
-/* Carga inicial Hero */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -729,7 +728,6 @@ body {
     to { opacity: 1; }
 }
 
-/* Revelado basado en Scroll */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(40px);
