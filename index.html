@@ -1,302 +1,488 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VETA — Lutería de autor, instrumentos a medida</title>
-<meta name="description" content="VETA es un taller de lutería de autor. Narramos el nacimiento de un instrumento, desde la madera en bruto hasta la primera nota. Instrumentos a medida, hechos a mano.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRASTES — Academia de Luthería de Lujo</title>
+  <meta name="description" content="TRASTES es una academia premium de luthería. Suscripción física-digital con maderas tonales certificadas, herramientas japonesas y mentoría directa con maestros artesanos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Indicador fijo de anillos de crecimiento -->
-<div class="ring-tracker" aria-hidden="true">
-  <svg viewBox="0 0 120 120" class="ring-tracker__svg">
-    <circle class="ring-tracker__track" cx="60" cy="60" r="52"/>
-    <circle class="ring-tracker__fill" cx="60" cy="60" r="52"/>
-    <circle cx="60" cy="60" r="38" class="ring-tracker__inner"/>
-    <circle cx="60" cy="60" r="24" class="ring-tracker__inner"/>
-  </svg>
-  <p class="ring-tracker__label">
-    <span class="ring-tracker__step">00</span>
-    <span class="ring-tracker__text">La semilla del sonido</span>
-  </p>
-</div>
+  <header class="site-nav" id="site-nav">
+    <a href="#hero" class="nav-logo">TRASTES</a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" id="nav-toggle">
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#ciencia">El Oficio</a>
+      <a href="#timber">Timber Packs</a>
+      <a href="#planes">Planes</a>
+      <a href="#terapia">Terapia</a>
+      <a href="#admision" class="nav-cta">Postular</a>
+    </nav>
+  </header>
 
-<header class="site-header" data-animate="fade-down">
-  <a href="#inicio" class="logo">VETA<span class="logo__mark">·</span></a>
-  <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
-    <span></span><span></span><span></span>
-  </button>
-  <nav id="primary-nav" class="primary-nav">
-    <a href="#origen">Origen</a>
-    <a href="#boceto">Boceto</a>
-    <a href="#corte">Corte</a>
-    <a href="#ensamblaje">Ensamblaje</a>
-    <a href="#a-medida">A Medida</a>
-    <a href="#nacimiento">Nacimiento</a>
-    <a href="#a-medida" class="nav-cta">Solicitar instrumento</a>
-  </nav>
-</header>
+  <main>
 
-<main>
+    <!-- 1. HERO -->
+    <section id="hero" class="section section--hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow reveal" data-delay="0">Academia de Luthería — TRASTES</p>
+          <h1 class="reveal" data-delay="1">
+            La música cambió.<br>
+            La forma de aprender<br>
+            a construir instrumentos<br>
+            también.
+          </h1>
+          <p class="hero-sub reveal" data-delay="2">
+            No enseñamos a ensamblar piezas de plástico industriales. Te formamos para entender la física de la madera, dominar el corte y dar vida a un instrumento único desde la materia virgen.
+          </p>
+          <div class="badges reveal" data-delay="3">
+            <span class="badge">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5L9.6 5l3.8.55-2.75 2.68.65 3.78L8 10.25l-3.3 1.76.65-3.78L2.6 5.55 6.4 5z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+              Maderas FSC Certificadas
+            </span>
+            <span class="badge">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 13.5l6.5-6.5M11.5 2.5l2 2-9 9-3 1 1-3z" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Gubias Japonesas Incluidas
+            </span>
+            <span class="badge">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.1"/><path d="M8 5.5v3.2l2 1.3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+              Mentoría 1-a-1 Directa
+            </span>
+            <span class="badge">
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2l1.5 3 3.3.5-2.4 2.3.57 3.3L8 9.5l-2.97 1.6.57-3.3L3.2 5.5 6.5 5z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+              Garantía de Sustitución por Veta
+            </span>
+          </div>
+          <a href="#admision" class="btn-primary reveal" data-delay="4">
+            Iniciar Solicitud de Admisión
+          </a>
+        </div>
 
-  <!-- 1. HERO -->
-  <section id="inicio" class="section section--hero" data-section-index="0" data-section-label="La semilla del sonido">
-    <div class="grain-field" aria-hidden="true">
-      <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
-        <g class="grain-rings">
-          <circle cx="400" cy="900" r="120"/><circle cx="400" cy="900" r="200"/>
-          <circle cx="400" cy="900" r="280"/><circle cx="400" cy="900" r="360"/>
-          <circle cx="400" cy="900" r="440"/><circle cx="400" cy="900" r="520"/>
-          <circle cx="400" cy="900" r="600"/><circle cx="400" cy="900" r="680"/>
-        </g>
-      </svg>
-    </div>
-    <div class="section__inner hero__inner">
-      <p class="eyebrow" data-animate="fade-up">Lutería de autor — Taller VETA</p>
-      <h1 data-animate="fade-up" data-delay="1">Antes de ser<br><em>instrumento</em>,<br>fue un árbol.</h1>
-      <p class="hero__lede" data-animate="fade-up" data-delay="2">
-        Cada veta cuenta una estación, cada nudo una resistencia que la madera tuvo que vencer.
-        Acá no fabricamos instrumentos: dejamos que uno termine de nacer. Bajá para ver el proceso,
-        desde el tronco hasta la primera nota.
-      </p>
-      <a href="#origen" class="scroll-cue" data-animate="fade-up" data-delay="3">
-        <span>Empezar el recorrido</span>
-        <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v19M1 14l6 6 6-6" stroke="currentColor" stroke-width="1.4"/></svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- 2. ORIGEN — LA MADERA -->
-  <section id="origen" class="section section--wood" data-section-index="1" data-section-label="Selección de la madera">
-    <div class="section__inner">
-      <p class="eyebrow" data-animate="fade-up">01 — El origen</p>
-      <h2 data-animate="fade-up">La madera elige antes de que el luthier decida.</h2>
-      <p class="section__text" data-animate="fade-up" data-delay="1">
-        Un tronco puede esperar quince años antes de convertirse en algo. Lo abrimos, leemos su veta a contraluz
-        y descartamos casi todo: solo una fracción de cada partida tiene la densidad, la elasticidad y el silencio
-        necesarios para vibrar bien. Elegir la madera correcta es, en gran parte, decidir cómo va a sonar un
-        instrumento que todavía no existe.
-      </p>
-
-      <div class="wood-grid" data-animate="fade-up" data-delay="2">
-        <article class="wood-card wood-card--palosanto">
-          <div class="wood-card__swatch" aria-hidden="true"></div>
-          <h3>Palosanto Río</h3>
-          <dl class="spec-list">
-            <div><dt>Procedencia</dt><dd>Bahía, Brasil</dd></div>
-            <div><dt>Densidad</dt><dd>1,15 g/cm³</dd></div>
-            <div><dt>Uso</dt><dd>Aros y fondo</dd></div>
-            <div><dt>Carácter</dt><dd>Graves profundos, brillo cristalino en agudos</dd></div>
-          </dl>
-        </article>
-        <article class="wood-card wood-card--ebano">
-          <div class="wood-card__swatch" aria-hidden="true"></div>
-          <h3>Ébano de Madagascar</h3>
-          <dl class="spec-list">
-            <div><dt>Procedencia</dt><dd>Región de Toliara</dd></div>
-            <div><dt>Densidad</dt><dd>1,08 g/cm³</dd></div>
-            <div><dt>Uso</dt><dd>Diapasón y puente</dd></div>
-            <div><dt>Carácter</dt><dd>Dureza extrema, sostiene la afinación bajo tensión</dd></div>
-          </dl>
-        </article>
-        <article class="wood-card wood-card--ovangkol">
-          <div class="wood-card__swatch" aria-hidden="true"></div>
-          <h3>Ovangkol</h3>
-          <dl class="spec-list">
-            <div><dt>Procedencia</dt><dd>Cuenca del Congo</dd></div>
-            <div><dt>Densidad</dt><dd>0,82 g/cm³</dd></div>
-            <div><dt>Uso</dt><dd>Mástil y filetes</dd></div>
-            <div><dt>Carácter</dt><dd>Punto medio entre la calidez del caoba y el brillo del palosanto</dd></div>
-          </dl>
-        </article>
+        <div class="hero-visual reveal" data-delay="2" aria-hidden="true">
+          <div class="guitar-container" id="guitar-container">
+            <svg class="guitar-svg" viewBox="0 0 260 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Grain lines revealed by JS -->
+              <g class="grain-lines" id="grain-lines">
+                <path d="M95 55 C90 115 88 178 91 238 C88 298 87 358 92 418" stroke="#D6988E" stroke-width="0.7" opacity="0.55"/>
+                <path d="M108 50 C103 112 100 176 103 236 C100 296 99 356 104 416" stroke="#D6988E" stroke-width="0.6" opacity="0.5"/>
+                <path d="M122 48 C117 110 115 174 118 234 C115 294 114 354 119 414" stroke="#D6988E" stroke-width="0.8" opacity="0.65"/>
+                <path d="M136 47 C131 109 129 173 132 233 C129 293 128 353 133 413" stroke="#D6988E" stroke-width="0.9" opacity="0.7"/>
+                <path d="M150 47 C145 109 143 173 146 233 C143 293 142 353 147 413" stroke="#D6988E" stroke-width="0.8" opacity="0.65"/>
+                <path d="M164 48 C160 110 158 174 161 234 C158 294 157 354 162 414" stroke="#D6988E" stroke-width="0.6" opacity="0.5"/>
+                <path d="M178 50 C174 112 173 176 176 236 C173 296 172 356 176 416" stroke="#D6988E" stroke-width="0.5" opacity="0.45"/>
+              </g>
+              <!-- Guitar body shape -->
+              <path class="guitar-body" d="M130 28 C150 28,192 48,202 88 C212 128,193 153,178 168 C198 183,222 208,224 248 C226 288,208 328,184 358 C169 378,168 398,178 418 C188 438,188 458,174 473 C160 488,130 492,130 492 C130 492,100 488,86 473 C72 458,72 438,82 418 C92 398,91 378,76 358 C52 328,34 288,36 248 C38 208,62 183,82 168 C67 153,48 128,58 88 C68 48,110 28,130 28 Z" stroke="#000" stroke-width="1.4" fill="rgba(226,211,192,0.07)"/>
+              <!-- Soundhole -->
+              <circle cx="130" cy="215" r="36" stroke="#000" stroke-width="1.2" fill="none"/>
+              <circle cx="130" cy="215" r="30" stroke="#000" stroke-width="0.4" fill="none" opacity="0.35"/>
+              <circle cx="130" cy="215" r="22" stroke="#000" stroke-width="0.4" fill="none" opacity="0.25"/>
+              <!-- Strings -->
+              <line x1="112" y1="105" x2="112" y2="470" stroke="#000" stroke-width="0.5" opacity="0.4"/>
+              <line x1="121" y1="103" x2="121" y2="470" stroke="#000" stroke-width="0.55" opacity="0.4"/>
+              <line x1="130" y1="102" x2="130" y2="470" stroke="#000" stroke-width="0.65" opacity="0.4"/>
+              <line x1="139" y1="102" x2="139" y2="470" stroke="#000" stroke-width="0.65" opacity="0.4"/>
+              <line x1="148" y1="103" x2="148" y2="470" stroke="#000" stroke-width="0.55" opacity="0.4"/>
+              <line x1="157" y1="105" x2="157" y2="470" stroke="#000" stroke-width="0.5" opacity="0.4"/>
+              <!-- Neck -->
+              <rect x="110" y="26" width="40" height="86" rx="3" stroke="#000" stroke-width="1.2" fill="rgba(0,0,0,0.03)"/>
+              <!-- Headstock -->
+              <rect x="103" y="4" width="54" height="25" rx="2" stroke="#000" stroke-width="1.2" fill="rgba(0,0,0,0.04)"/>
+              <!-- Fret lines -->
+              <line x1="110" y1="50" x2="150" y2="50" stroke="#000" stroke-width="0.7" opacity="0.35"/>
+              <line x1="110" y1="65" x2="150" y2="65" stroke="#000" stroke-width="0.7" opacity="0.35"/>
+              <line x1="110" y1="80" x2="150" y2="80" stroke="#000" stroke-width="0.7" opacity="0.35"/>
+              <!-- Nut -->
+              <line x1="110" y1="27" x2="150" y2="27" stroke="#000" stroke-width="1" opacity="0.5"/>
+              <!-- Bridge -->
+              <rect x="116" y="452" width="28" height="5" rx="1" stroke="#000" stroke-width="1" fill="rgba(0,0,0,0.06)"/>
+              <!-- Waist detail -->
+              <path d="M36 248 C28 248,26 245,30 242" stroke="#ABACAE" stroke-width="0.7" opacity="0.5"/>
+              <path d="M224 248 C232 248,234 245,230 242" stroke="#ABACAE" stroke-width="0.7" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 3. BOCETO — DISEÑO ERGONÓMICO -->
-  <section id="boceto" class="section section--blueprint" data-section-index="2" data-section-label="Diseño ergonómico">
-    <div class="section__inner section__inner--split">
-      <div class="blueprint__text">
-        <p class="eyebrow" data-animate="fade-up">02 — El boceto</p>
-        <h2 data-animate="fade-up">Un instrumento se diseña alrededor de un cuerpo, no al revés.</h2>
-        <p class="section__text" data-animate="fade-up" data-delay="1">
-          Antes de cortar nada, medimos la mano que va a tocarlo: largo de dedos, ángulo de muñeca, altura,
-          postura habitual. El escalado del mástil, el radio del diapasón y el grosor del cuerpo se ajustan
-          a esa anatomía específica. No existe una "talla única" en un instrumento bien hecho.
+    <!-- 2. CIENCIA DEL TONO -->
+    <section id="ciencia" class="section section--ciencia">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-delay="0">02 — La Física del Sonido</p>
+        <h2 class="reveal" data-delay="1">La madera no vibra por azar.<br>Vibra por física.</h2>
+        <p class="section-text reveal" data-delay="2">
+          Cada tapa armónica es una ecuación resuelta en madera. El módulo de elasticidad de Young, la densidad del material y la geometría del varetaje interno determinan con precisión matemática cómo se propagan las ondas acústicas dentro del instrumento.
         </p>
-        <ul class="check-list" data-animate="fade-up" data-delay="2">
-          <li>Longitud de escala calculada según la mano del músico</li>
-          <li>Perfil de mástil moldeado a partir de un molde de la palma</li>
-          <li>Ángulo de inclinación pensado para la postura real de ejecución</li>
-        </ul>
-      </div>
-      <div class="blueprint__diagram" aria-hidden="true" data-animate="fade-up" data-delay="2">
-        <svg viewBox="0 0 420 560">
-          <rect x="6" y="6" width="408" height="548" class="bp-frame"/>
-          <line x1="40" y1="40" x2="40" y2="520" class="bp-dim"/>
-          <line x1="32" y1="40" x2="48" y2="40" class="bp-dim"/>
-          <line x1="32" y1="520" x2="48" y2="520" class="bp-dim"/>
-          <text x="50" y="280" class="bp-label" transform="rotate(-90 50 280)">650 mm escala</text>
-          <path d="M150 60 C 110 140, 110 220, 150 300 L150 460 C150 490 180 500 210 500 C240 500 270 490 270 460 L270 300 C310 220 310 140 270 60 Z" class="bp-body"/>
-          <circle cx="210" cy="120" r="46" class="bp-hole"/>
-          <line x1="210" y1="60" x2="210" y2="500" class="bp-center"/>
-          <text x="290" y="120" class="bp-label">⌀ 92 mm</text>
-          <text x="290" y="400" class="bp-label">cintura 250 mm</text>
-        </svg>
-      </div>
-    </div>
-  </section>
 
-  <!-- 4. CORTE — PRECISIÓN DE LAS HERRAMIENTAS -->
-  <section id="corte" class="section section--tools" data-section-index="3" data-section-label="El corte">
-    <div class="section__inner">
-      <p class="eyebrow" data-animate="fade-up">03 — El corte</p>
-      <h2 data-animate="fade-up">Cada filo decide algo que ya no se puede deshacer.</h2>
-      <p class="section__text" data-animate="fade-up" data-delay="1">
-        A diferencia de una máquina, una gubia siente la dirección de la fibra antes de que el ojo la vea.
-        Trabajamos con un calibre que rara vez supera el medio milímetro de margen: lo suficiente para que
-        una tapa armónica de 2,4&nbsp;mm no se rompa, y lo suficiente para que vibre.
-      </p>
+        <div class="formula-block reveal" data-delay="3">
+          <div class="formula-display">
+            <span class="formula-lhs">v</span>
+            <span class="formula-eq">=</span>
+            <span class="formula-sqrt">
+              <span class="formula-sqrt-symbol">√</span>
+              <span class="formula-fraction">
+                <span class="formula-num">E</span>
+                <span class="formula-bar"></span>
+                <span class="formula-den">ρ</span>
+              </span>
+            </span>
+          </div>
+          <ul class="formula-legend">
+            <li><span class="legend-var">v</span><span class="legend-def">Velocidad de propagación acústica en la madera (m/s)</span></li>
+            <li><span class="legend-var">E</span><span class="legend-def">Módulo de elasticidad de Young — rigidez de la tapa (Pa)</span></li>
+            <li><span class="legend-var">ρ</span><span class="legend-def">Densidad de la madera — masa por unidad de volumen (kg/m³)</span></li>
+          </ul>
+        </div>
 
-      <div class="tool-row" data-animate="fade-up" data-delay="2">
-        <div class="tool-card">
-          <svg viewBox="0 0 64 64" class="tool-icon"><path d="M10 54 L46 18 L52 24 L16 60 Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M46 18 L54 10" stroke="currentColor" stroke-width="2"/></svg>
-          <h3>Gubias</h3>
-          <p>Para tallar el contorno del clavijero y los rebajes internos, fibra a fibra.</p>
-        </div>
-        <div class="tool-card">
-          <svg viewBox="0 0 64 64" class="tool-icon"><rect x="8" y="28" width="44" height="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M52 32 L60 24 M52 32 L60 40" stroke="currentColor" stroke-width="2"/></svg>
-          <h3>Formones</h3>
-          <p>Ajustan el encaje del mástil al cuerpo con tolerancia de décimas de milímetro.</p>
-        </div>
-        <div class="tool-card">
-          <svg viewBox="0 0 64 64" class="tool-icon"><path d="M6 40 L58 40" stroke="currentColor" stroke-width="2"/><path d="M10 40 L18 24 L26 40 L34 24 L42 40 L50 24 L58 40" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-          <h3>Serrucho de costilla</h3>
-          <p>Corta los bloques de la tapa antes del desbastado, siguiendo la veta y nunca contra ella.</p>
-        </div>
-        <div class="tool-card">
-          <svg viewBox="0 0 64 64" class="tool-icon"><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="2"/><path d="M32 16v32M16 32h32" stroke="currentColor" stroke-width="1.4"/></svg>
-          <h3>Calibre de precisión</h3>
-          <p>Mide el grosor de la tapa en quince puntos distintos antes de aprobarla.</p>
+        <div class="chladni-block reveal" data-delay="2">
+          <div class="chladni-visual" aria-hidden="true">
+            <svg viewBox="0 0 300 300" class="chladni-svg">
+              <circle cx="150" cy="150" r="118" fill="none" stroke="#000" stroke-width="0.5" opacity="0.1" class="cr cr-1"/>
+              <circle cx="150" cy="150" r="88"  fill="none" stroke="#000" stroke-width="0.5" opacity="0.15" class="cr cr-2"/>
+              <circle cx="150" cy="150" r="60"  fill="none" stroke="#000" stroke-width="0.6" opacity="0.2" class="cr cr-3"/>
+              <circle cx="150" cy="150" r="34"  fill="none" stroke="#000" stroke-width="0.7" opacity="0.25" class="cr cr-4"/>
+              <circle cx="150" cy="150" r="12"  fill="none" stroke="#D6988E" stroke-width="1"  opacity="0.5" class="cr cr-5"/>
+              <line x1="150" y1="32"  x2="150" y2="268" stroke="#000" stroke-width="0.4" opacity="0.1"/>
+              <line x1="32"  y1="150" x2="268" y2="150" stroke="#000" stroke-width="0.4" opacity="0.1"/>
+              <line x1="68"  y1="68"  x2="232" y2="232" stroke="#000" stroke-width="0.4" opacity="0.08"/>
+              <line x1="232" y1="68"  x2="68"  y2="232" stroke="#000" stroke-width="0.4" opacity="0.08"/>
+              <circle cx="150" cy="62"  r="2.5" fill="#D6988E" opacity="0.5" class="cd"/>
+              <circle cx="150" cy="238" r="2.5" fill="#D6988E" opacity="0.5" class="cd"/>
+              <circle cx="62"  cy="150" r="2.5" fill="#D6988E" opacity="0.5" class="cd"/>
+              <circle cx="238" cy="150" r="2.5" fill="#D6988E" opacity="0.5" class="cd"/>
+              <circle cx="98"  cy="98"  r="2"   fill="#D6988E" opacity="0.35" class="cd"/>
+              <circle cx="202" cy="98"  r="2"   fill="#D6988E" opacity="0.35" class="cd"/>
+              <circle cx="98"  cy="202" r="2"   fill="#D6988E" opacity="0.35" class="cd"/>
+              <circle cx="202" cy="202" r="2"   fill="#D6988E" opacity="0.35" class="cd"/>
+            </svg>
+            <p class="chladni-caption">Patrón de Chladni — nodos vibracionales sobre la tapa</p>
+          </div>
+          <div class="chladni-text">
+            <h3>Patrones de Vibración de Chladni</h3>
+            <p>La geometría del varetaje interno modifica los nodos vibracionales sobre la tapa, permitiendo predecir y modular el sostenimiento armónico y los timbres del instrumento antes de que suene por primera vez.</p>
+            <p>En TRASTES aprendés a leer estos patrones y a ajustar el adelgazamiento de la tapa con calibrador de décimas para optimizar el espectro tonal final. Una tapa de 2,4&nbsp;mm calibrada con precisión puede ampliar o reducir el sustain en hasta un 40%.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 5. ENSAMBLAJE — MESES DE ESPERA -->
-  <section id="ensamblaje" class="section section--assembly" data-section-index="4" data-section-label="Ensamblaje y secado">
-    <div class="section__inner">
-      <p class="eyebrow" data-animate="fade-up">04 — El ensamblaje</p>
-      <h2 data-animate="fade-up">Lo que más tarda no es cortar: es esperar.</h2>
-      <p class="section__text" data-animate="fade-up" data-delay="1">
-        Entre el encolado de los aros y el barnizado final hay semanas en las que no pasa nada visible.
-        La cola necesita curar, la madera necesita estabilizarse a la humedad del taller, el barniz necesita
-        secar en capas que se cuentan por docenas. Apurar cualquiera de esas pausas se nota para siempre en
-        cómo responde el instrumento.
-      </p>
+    <!-- 3. TIMBER PACKS -->
+    <section id="timber" class="section section--timber">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-delay="0">03 — Selección de Maderas</p>
+        <h2 class="reveal" data-delay="1">Elegí la madera.<br>Definí tu sonido.</h2>
+        <p class="section-text reveal" data-delay="2">
+          Cada pack trimestral incluye maderas curadas de forma natural, seleccionadas a mano bajo corte radial perfecto de cuarto de veta. Tu elección determina el carácter acústico del instrumento que construirás.
+        </p>
 
-      <ol class="timeline" data-animate="fade-up" data-delay="2">
-        <li><span class="timeline__week">Semana 1–2</span><p>Encolado de aros y fondo, prensado en molde.</p></li>
-        <li><span class="timeline__week">Semana 3–6</span><p>Estabilización de la madera a la humedad ambiente del taller.</p></li>
-        <li><span class="timeline__week">Semana 7–10</span><p>Tallado de mástil, encaje de diapasón, primer armado en seco.</p></li>
-        <li><span class="timeline__week">Semana 11–16</span><p>Barnizado en capas finas, con días de secado entre cada mano.</p></li>
-        <li><span class="timeline__week">Semana 17–18</span><p>Encordado de prueba, ajuste de acción y primera vibración real.</p></li>
-      </ol>
-    </div>
-  </section>
+        <div class="timber-grid">
+          <article class="timber-card reveal" data-delay="1">
+            <div class="timber-swatch timber-swatch--arce" aria-hidden="true"></div>
+            <div class="timber-body">
+              <span class="timber-tag">Pack I</span>
+              <h3>Arce Flameado<br>&amp; Ébano Real</h3>
+              <p class="timber-character">Brillante · Proyectado · Cristalino</p>
+              <p class="timber-desc">Brillo acústico extremo, proyección agresiva en agudos y diapasón de ébano de alta densidad molecular. Ideal para repertorio clásico y flamenco de concierto.</p>
+              <dl class="timber-specs">
+                <div><dt>Densidad</dt><dd>0.68 / 1.08 g/cm³</dd></div>
+                <div><dt>Módulo E</dt><dd>9.8 / 14.2 GPa</dd></div>
+                <div><dt>Origen</dt><dd>Europa / Madagascar</dd></div>
+              </dl>
+            </div>
+          </article>
 
-  <!-- 6. INSTRUMENTO A MEDIDA — PÁGINA DE DETALLE DEL SERVICIO -->
-  <section id="a-medida" class="section section--custom" data-section-index="5" data-section-label="Tu instrumento">
-    <div class="section__inner">
-      <p class="eyebrow" data-animate="fade-up">Servicio</p>
-      <h2 data-animate="fade-up">Instrumento a Medida <span class="custom__sub">(Custom Build)</span></h2>
-      <p class="section__text section__text--lg" data-animate="fade-up" data-delay="1">
-        No partimos de un modelo de catálogo. Partimos de tu mano, tu oído y el sonido que tenés en la
-        cabeza pero todavía no podés tocar. El proceso de un instrumento a medida es el mismo que narramos
-        arriba, aplicado por completo a un solo músico: vos.
-      </p>
+          <article class="timber-card timber-card--featured reveal" data-delay="2">
+            <div class="timber-swatch timber-swatch--caoba" aria-hidden="true"></div>
+            <div class="timber-body">
+              <span class="timber-tag timber-tag--accent">Más elegido</span>
+              <h3>Caoba Hondureña<br>&amp; Palisandro</h3>
+              <p class="timber-character">Cálido · Profundo · Aterciopelado</p>
+              <p class="timber-desc">Rango medio cálido y aterciopelado, sustain prolongado y un color tonal con graves redondos. La elección clásica de los grandes luthiers de concierto.</p>
+              <dl class="timber-specs">
+                <div><dt>Densidad</dt><dd>0.54 / 1.15 g/cm³</dd></div>
+                <div><dt>Módulo E</dt><dd>8.1 / 15.7 GPa</dd></div>
+                <div><dt>Origen</dt><dd>Honduras / Brasil</dd></div>
+              </dl>
+            </div>
+          </article>
 
-      <div class="process">
-        <article class="process__step" data-animate="fade-up" data-delay="1">
-          <span class="process__num">01</span>
-          <h3>Diagnóstico sonoro</h3>
-          <p>Una conversación a fondo sobre el sonido que buscás, los géneros que tocás y los instrumentos que ya pasaron por tus manos.</p>
-        </article>
-        <article class="process__step" data-animate="fade-up" data-delay="2">
-          <span class="process__num">02</span>
-          <h3>Selección de materiales</h3>
-          <p>Elegimos en conjunto las maderas, herrajes y acabados de nuestro stock curado, explicando cómo cada elección afecta al sonido final.</p>
-        </article>
-        <article class="process__step" data-animate="fade-up" data-delay="3">
-          <span class="process__num">03</span>
-          <h3>Diseño ergonómico</h3>
-          <p>Tomamos medidas de tu mano y tu postura para definir escala, perfil de mástil y forma del cuerpo a tu medida exacta.</p>
-        </article>
-        <article class="process__step" data-animate="fade-up" data-delay="4">
-          <span class="process__num">04</span>
-          <h3>Construcción artesanal</h3>
-          <p>El instrumento se construye en banco, a mano, con las herramientas y los tiempos de secado que viste en las secciones anteriores.</p>
-        </article>
-        <article class="process__step" data-animate="fade-up" data-delay="5">
-          <span class="process__num">05</span>
-          <h3>Ajuste y entrega</h3>
-          <p>Encordamos, ajustamos la acción y tocamos el instrumento con vos antes de que se vaya del taller.</p>
-        </article>
-      </div>
-
-      <div class="custom__footer" data-animate="fade-up" data-delay="2">
-        <div class="custom__meta">
-          <div><span class="meta__num">4–7</span><span class="meta__label">meses de trabajo artesanal</span></div>
-          <div><span class="meta__num">1</span><span class="meta__label">instrumento, un solo músico</span></div>
-          <div><span class="meta__num">100%</span><span class="meta__label">decisiones tomadas en conjunto</span></div>
+          <article class="timber-card reveal" data-delay="3">
+            <div class="timber-swatch timber-swatch--cedro" aria-hidden="true"></div>
+            <div class="timber-body">
+              <span class="timber-tag">Pack III</span>
+              <h3>Cedro Canadiense<br>&amp; Nogal Claro</h3>
+              <p class="timber-character">Íntimo · Equilibrado · Táctil</p>
+              <p class="timber-desc">Respuesta rápida al tacto ligero, timbre íntimo ideal para fingerpicking y maderas de veta espiralada. Extraordinario para música de cámara y repertorio contemporáneo.</p>
+              <dl class="timber-specs">
+                <div><dt>Densidad</dt><dd>0.42 / 0.64 g/cm³</dd></div>
+                <div><dt>Módulo E</dt><dd>7.2 / 10.3 GPa</dd></div>
+                <div><dt>Origen</dt><dd>Canadá / Europa</dd></div>
+              </dl>
+            </div>
+          </article>
         </div>
-        <a href="mailto:taller@veta-instrumentos.com" class="btn-primary">Solicitar instrumento a medida</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 7. NACIMIENTO — PRIMERA NOTA -->
-  <section id="nacimiento" class="section section--birth" data-section-index="6" data-section-label="La primera nota">
-    <div class="grain-field grain-field--top" aria-hidden="true">
-      <svg viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
-        <g class="grain-rings grain-rings--light">
-          <circle cx="400" cy="-100" r="120"/><circle cx="400" cy="-100" r="200"/>
-          <circle cx="400" cy="-100" r="280"/><circle cx="400" cy="-100" r="360"/>
-          <circle cx="400" cy="-100" r="440"/><circle cx="400" cy="-100" r="520"/>
-        </g>
-      </svg>
-    </div>
-    <div class="section__inner">
-      <p class="eyebrow" data-animate="fade-up">05 — El nacimiento</p>
-      <h2 data-animate="fade-up">La primera nota no se toca: se confirma.</h2>
-      <p class="section__text" data-animate="fade-up" data-delay="1">
-        Después de meses de espera, el barniz seca, las cuerdas se tensan por primera vez y el instrumento
-        responde. No hay manera de simular ese momento de antemano: es la única prueba real de que cada
-        decisión, desde la veta del tronco hasta el ángulo del mástil, estaba bien tomada. A partir de ahí,
-        el instrumento ya no es nuestro. Es tuyo, y va a seguir envejeciendo con cada mano que lo toque.
-      </p>
-      <a href="#a-medida" class="btn-secondary" data-animate="fade-up" data-delay="2">Empezar el tuyo</a>
-    </div>
-  </section>
+    <!-- 4. NORMAS -->
+    <section id="normas" class="section section--normas">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-delay="0">04 — Estándares No Negociables</p>
+        <h2 class="reveal" data-delay="1">Somos exigentes.<br>No negociamos la calidad.</h2>
+        <p class="section-text reveal" data-delay="2">
+          Las mismas exclusiones rigurosas que definen a los mejores talleres de luthería del mundo. Sin excepciones, sin sustitutos, sin compromiso.
+        </p>
 
-</main>
+        <div class="normas-grid">
+          <div class="norma-item reveal" data-delay="1">
+            <div class="norma-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div class="norma-text">
+              <h3>Cero Resinas Sintéticas</h3>
+              <p>Empleo exclusivo de colas animales calientes y colas de caseína tradicionales que garantizan la reversibilidad total del instrumento para generaciones futuras.</p>
+            </div>
+          </div>
+          <div class="norma-item reveal" data-delay="2">
+            <div class="norma-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg>
+            </div>
+            <div class="norma-text">
+              <h3>Cero Contrachapados Industriales</h3>
+              <p>Todo el material enviado consiste en bloques de madera maciza seleccionados a mano con corte radial perfecto de cuarto de veta. Cero tolerancia a los laminados.</p>
+            </div>
+          </div>
+          <div class="norma-item reveal" data-delay="3">
+            <div class="norma-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            </div>
+            <div class="norma-text">
+              <h3>Cero Adhesivos Tóxicos</h3>
+              <p>Exclusión total de disolventes derivados del petróleo. Acabados exclusivamente con goma laca natural disuelta en alcohol de alta pureza aplicada a muñequilla.</p>
+            </div>
+          </div>
+          <div class="norma-item reveal" data-delay="4">
+            <div class="norma-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div class="norma-text">
+              <h3>Cero Metales Blandos</h3>
+              <p>Todos los trastes e implementos metálicos provienen de aleaciones certificadas de alpaca y acero inoxidable templado de alta resistencia con dureza Vickers verificada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer class="site-footer" data-animate="fade-up">
-  <div class="site-footer__inner">
-    <p class="logo logo--footer">VETA<span class="logo__mark">·</span></p>
-    <div class="site-footer__contact">
-      <p>Taller de lutería de autor</p>
-      <a href="mailto:taller@veta-instrumentos.com">taller@veta-instrumentos.com</a>
+    <!-- 5. PLANES -->
+    <section id="planes" class="section section--planes">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-delay="0">05 — Suscripción Académica</p>
+        <h2 class="reveal" data-delay="1">Elegí tu ritmo<br>de aprendizaje.</h2>
+        <p class="section-text reveal" data-delay="2">
+          Una suscripción trimestral de materiales y mentorías que acompañan tu proceso real de construcción. No pagas vídeos bajo demanda. Pagas la materia prima con la que vas a trabajar.
+        </p>
+        <p class="shipping-notice reveal" data-delay="3">
+          Entrega Trimestral &nbsp;·&nbsp; Envío Internacional Gratuito &nbsp;·&nbsp; Fácil de Pausar o Cancelar en Un Clic
+        </p>
+
+        <div class="planes-grid">
+          <article class="plan-card reveal" data-delay="1">
+            <div class="plan-head">
+              <span class="plan-label">Plan Iniciación Trastil</span>
+              <div class="plan-price">
+                <span class="plan-amount">890</span>
+                <span class="plan-currency">USD / trimestre</span>
+              </div>
+              <p class="plan-sub">Kit estructural acústico básico</p>
+            </div>
+            <ul class="plan-features">
+              <li>Planos a escala real impresos en lino</li>
+              <li>Maderas brutas cepilladas de tapa y fondo</li>
+              <li>Set de gubias de perfil plano certificadas</li>
+              <li>Acceso a plataforma de tutoriales en vídeo</li>
+              <li>Tutoría grupal quincenal online (60 min)</li>
+              <li>Soporte técnico por email ilimitado</li>
+            </ul>
+            <a href="#admision" class="btn-plan">Solicitar Admisión</a>
+          </article>
+
+          <article class="plan-card plan-card--featured reveal" data-delay="2">
+            <div class="plan-featured-badge">Recomendado</div>
+            <div class="plan-head">
+              <span class="plan-label">Plan Maestro Luthier</span>
+              <div class="plan-price">
+                <span class="plan-amount">2.400</span>
+                <span class="plan-currency">USD / trimestre</span>
+              </div>
+              <p class="plan-sub">Kit completo de luthería avanzada</p>
+            </div>
+            <ul class="plan-features">
+              <li>Todo lo del Plan Iniciación</li>
+              <li>Maderas exóticas grado AAAAA (Arce flameado de concierto)</li>
+              <li>Set de formones de aleación japonesa — 12 piezas</li>
+              <li>Bobinadora para micrófonos a medida</li>
+              <li>Calibradores digitales de tensión de cuerdas</li>
+              <li><strong>Mentoría 1-a-1 mensual directa con el Maestro</strong></li>
+              <li>Acceso vitalicio al archivo histórico de planos</li>
+            </ul>
+            <a href="#admision" class="btn-plan btn-plan--featured">Solicitar Admisión</a>
+          </article>
+        </div>
+
+        <p class="cancel-note reveal" data-delay="3">
+          <svg viewBox="0 0 16 16" fill="none" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M8 7v3.5M8 5.2v.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          Si necesitás pausar o cancelar, tu panel de acceso ejecuta la acción en un único clic, en cualquier momento, sin llamadas, sin burocracia y sin penalización.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. TERAPIA ANALÓGICA -->
+    <section id="terapia" class="section section--terapia">
+      <div class="section-inner section-inner--narrow">
+        <p class="eyebrow reveal" data-delay="0">06 — Terapia Analógica</p>
+        <h2 class="reveal" data-delay="1">La fatiga digital es real.<br>Te ayudamos a reconectar.</h2>
+
+        <div class="terapia-content">
+          <p class="terapia-lead reveal" data-delay="2">
+            Pasar doce horas frente a pantallas de luz azul desgasta el sistema nervioso de formas que el descanso convencional no puede reparar. La luthería es una meditación activa y táctil.
+          </p>
+          <p class="reveal" data-delay="3">
+            Sentir la resistencia física de la madera bajo el formón, medir con calibrador manual al décimo de milímetro y escuchar el tono acústico inicial de una tapa recién lijada actúa como un reinicio profundo para el cerebro. No es metáfora: es fisiología.
+          </p>
+          <p class="reveal" data-delay="3">
+            Construir un objeto físico real con tus propias manos —un objeto que va a perdurar décadas y que alguien más va a tocar— contrarresta la abstracción del trabajo digital como pocas actividades pueden hacerlo. La luthería devuelve la sensación de permanencia en un mundo efímero.
+          </p>
+        </div>
+
+        <div class="terapia-stats reveal" data-delay="4">
+          <div class="tstat">
+            <span class="tstat-num">94%</span>
+            <span class="tstat-label">de los alumnos reportan reducción del estrés laboral en las primeras 4 semanas</span>
+          </div>
+          <div class="tstat">
+            <span class="tstat-num">3h</span>
+            <span class="tstat-label">promedio de trabajo sin pantallas en cada sesión de taller semanal</span>
+          </div>
+          <div class="tstat">
+            <span class="tstat-num">1</span>
+            <span class="tstat-label">instrumento único construido por tus propias manos al finalizar el ciclo</span>
+          </div>
+        </div>
+
+        <div class="testimonios reveal" data-delay="5">
+          <blockquote class="testimonio">
+            <p>"Estaba escéptico de poder construir una guitarra de concierto clásica de forma online. El kit de Caoba y Palisandro llegó en condiciones de veta perfectas. El proceso de lijado y encolado me ayudó a lidiar con el insomnio corporativo. El instrumento final tiene una proyección acústica que compite con guitarras de luthier profesionales de miles de dólares."</p>
+            <cite>Vic V. — Desarrollador de Software · Alumno Verificado</cite>
+          </blockquote>
+          <blockquote class="testimonio">
+            <p>"La precisión del plan trimestral es fantástica. El diapasón de ébano se siente sumamente suave bajo los dedos. La luthería tradicional es exigente, pero recibir las herramientas adecuadas de forma guiada reduce al mínimo los errores destructivos. Totalmente recomendado."</p>
+            <cite>Samantha D. — Diseñadora Industrial · Alumna Verificada</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PORTAL DE ADMISIÓN -->
+    <section id="admision" class="section section--admision">
+      <div class="section-inner">
+        <p class="eyebrow eyebrow--light reveal" data-delay="0">07 — Admisión Exclusiva</p>
+        <h2 class="admision-h2 reveal" data-delay="1">No vendemos a cualquiera.<br>Evaluamos cada postulación.</h2>
+        <p class="admision-sub reveal" data-delay="2">
+          La capacidad física del taller para corregir planos de forma individualizada determina el cupo real. No hay temporizadores genéricos.
+        </p>
+
+        <div class="spots-block reveal" data-delay="3">
+          <div class="spots-bar-wrap">
+            <div class="spots-bar"><div class="spots-fill" style="width:66.6%"></div></div>
+          </div>
+          <p class="spots-text">Plazas Disponibles — Semestre Otoño 2026: <strong>2 de 6</strong></p>
+        </div>
+
+        <div class="admision-cta-wrap reveal" data-delay="4">
+          <button class="btn-admision" id="btn-admision">
+            Solicitar Admisión
+            <svg viewBox="0 0 20 20" fill="none" width="15" height="15" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <!-- Multi-step form -->
+        <div class="admision-form-wrap" id="admision-form" aria-hidden="true">
+
+          <form id="form-main" novalidate>
+            <div class="form-step active" id="step-1">
+              <p class="form-step-num">01 / 03</p>
+              <p class="form-question">¿Cuántas horas semanales podés dedicar al trabajo en taller?</p>
+              <div class="form-options" role="group" aria-label="Horas semanales">
+                <button type="button" class="form-opt" data-value="1-3h">1 a 3 horas</button>
+                <button type="button" class="form-opt" data-value="4-6h">4 a 6 horas</button>
+                <button type="button" class="form-opt" data-value="7-10h">7 a 10 horas</button>
+                <button type="button" class="form-opt" data-value="10h+">Más de 10 horas</button>
+              </div>
+              <button type="button" class="btn-next" id="next-1" disabled>Continuar</button>
+            </div>
+
+            <div class="form-step" id="step-2">
+              <p class="form-step-num">02 / 03</p>
+              <p class="form-question">¿Disponés de un espacio de trabajo propio (aunque sea reducido)?</p>
+              <div class="form-options" role="group" aria-label="Espacio de trabajo">
+                <button type="button" class="form-opt" data-value="taller-propio">Taller propio equipado</button>
+                <button type="button" class="form-opt" data-value="espacio-adaptado">Espacio doméstico adaptado</button>
+                <button type="button" class="form-opt" data-value="espacio-compartido">Coworking o espacio compartido</button>
+                <button type="button" class="form-opt" data-value="sin-espacio">Aún no, estoy buscando</button>
+              </div>
+              <button type="button" class="btn-next" id="next-2" disabled>Continuar</button>
+            </div>
+
+            <div class="form-step" id="step-3">
+              <p class="form-step-num">03 / 03</p>
+              <label class="form-question" for="motivacion">¿Qué te llevó a querer construir tu propio instrumento?</label>
+              <textarea id="motivacion" class="form-textarea" placeholder="Contanos brevemente tu motivación y qué tipo de instrumento soñás construir…" rows="4"></textarea>
+              <input type="text"  id="nombre" class="form-input" placeholder="Tu nombre completo" autocomplete="name"/>
+              <input type="email" id="email"  class="form-input" placeholder="Tu correo electrónico" autocomplete="email"/>
+              <button type="submit" class="btn-submit" id="btn-submit" disabled>Enviar Postulación</button>
+            </div>
+          </form>
+
+          <div class="form-loading" id="form-loading" aria-live="polite">
+            <div class="loading-ring">
+              <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="24" fill="none" stroke="rgba(226,211,192,0.2)" stroke-width="1.5"/><circle class="loading-arc" cx="30" cy="30" r="24" fill="none" stroke="#D6988E" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="80 72"/></svg>
+            </div>
+            <p>El Maestro está revisando tu perfil…</p>
+          </div>
+
+          <div class="form-success" id="form-success" aria-live="polite">
+            <div class="success-icon">
+              <svg viewBox="0 0 52 52" fill="none" aria-hidden="true"><circle cx="26" cy="26" r="24" stroke="#D6988E" stroke-width="1.5"/><path d="M15 26l7.5 7.5 14.5-15" stroke="#D6988E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Postulación recibida.</h3>
+            <p>El Maestro Luthier evaluará tu compromiso y te contactará en los próximos 5 días hábiles para coordinar una conversación de admisión personal. Solo continuamos con quienes demuestran un compromiso genuino con el oficio.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-logo">TRASTES</p>
+      <div class="footer-contact">
+        <p>Academia de Luthería de Lujo</p>
+        <a href="mailto:admisiones@trastes-academia.com">admisiones@trastes-academia.com</a>
+      </div>
+      <p class="footer-note">Cada plaza se ocupa con alguien que va a construir algo que nunca olvidará haber hecho con sus manos.</p>
     </div>
-    <p class="site-footer__note">Cada instrumento que sale del taller tarda más en hacerse de lo que tarda en sonar para siempre.</p>
-  </div>
-</footer>
+  </footer>
 
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
