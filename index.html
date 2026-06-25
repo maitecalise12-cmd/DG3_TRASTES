@@ -1,104 +1,58 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRASTES | Escuela de Luthería Premium</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
-    <header>
-        <div class="nav-container">
-            <a href="#" class="nav-logo">TRASTES</a>
-            <div class="nav-contact">
-                <a href="#postular" class="btn">Contacto</a>
-            </div>
-        </div>
-    </header>
-
-    <section class="hero" id="inicio">
-        <svg class="hero-rings" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="250" cy="250" r="40" fill="none" stroke="#1C421A" stroke-width="1.5"/>
-            <circle cx="250" cy="250" r="80" fill="none" stroke="#1C421A" stroke-width="1.2" stroke-dasharray="4 2"/>
-            <circle cx="250" cy="250" r="120" fill="none" stroke="#1C421A" stroke-width="1.5"/>
-            <circle cx="250" cy="250" r="160" fill="none" stroke="#1C421A" stroke-width="1" stroke-dasharray="8 4"/>
-            <circle cx="250" cy="250" r="200" fill="none" stroke="#1C421A" stroke-width="1.8"/>
-            <circle cx="250" cy="250" r="240" fill="none" stroke="#1C421A" stroke-width="1"/>
-        </svg>
-        <div class="container">
-            <div class="hero-content reveal">
-                <h1>Donde la madera encuentra su voz</h1>
-                <p class="subtitle">Cada instrumento nace de un proceso artesanal donde materiales, calibración y detalle definen un sonido imposible de replicar.</p>
-                <div class="hero-actions">
-                    <a href="#maderas" class="btn btn-outline">VER TU INSTRUMENTO</a>
-                    <a href="#programas" class="btn btn-solid">EMPIEZA ACÁ</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="manifiesto" id="manifiesto">
-        <div class="manifiesto-col manifiesto-left">
-            <div class="reveal">
-                <h2>El taller donde nace tu sonido</h2>
-                <p>En una era dominada por la replicación industrial y la inmediatez, nosotros elegimos el ritmo del árbol. Vivimos con una obsesión milimétrica, entendiendo que una décima de milímetro define el alma acústica de un instrumento.</p>
-                <p>Trabajamos exclusivamente con maderas nobles curadas, seleccionadas pieza por pieza. Aquí no aprendes a ensamblar; aprendes a escuchar la arquitectura orgánica del material.</p>
-            </div>
-        </div>
-        <div class="manifiesto-col manifiesto-right">
-            <div class="taller-artwork">
-                <div class="light-ray"></div>
-                <div class="wood-shaving"></div>
-                <div class="taller-bench">
-                    <div class="tool-garlopa"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+<!-- 3. SELECTOR INTERACTIVO DE MADERAS -->
     <section class="maderas" id="maderas">
         <div class="container">
             <div class="section-title-container reveal">
                 <h2>La Materia Prima del Sonido</h2>
             </div>
             <div class="maderas-grid reveal">
+                <!-- Arce -->
                 <div class="madera-card expanded" data-wood="arce">
+                    <img src="assets/arce.jpg" alt="Madera de Arce" class="madera-bg-img">
                     <div class="madera-icon">🪵</div>
                     <div class="madera-name">Arce</div>
                     <div class="madera-desc-title">Descripción</div>
                     <div class="madera-info">Altamente reflectivo y denso. Aporta agudos brillantes, una claridad cristalina nota por nota, y una estabilidad estructural legendaria para fondos y mástiles.</div>
                     <div class="madera-meta">Click para explorar</div>
                 </div>
+                <!-- Palisandro -->
                 <div class="madera-card" data-wood="palisandro">
+                    <img src="assets/palisandro.jpg" alt="Madera de Palisandro" class="madera-bg-img">
                     <div class="madera-icon">🪵</div>
                     <div class="madera-name">Palisandro</div>
                     <div class="madera-desc-title">Descripción</div>
-                    <div class="madera-info">Palisandro: Aporta graves profundos y un sustain eterno. Su textura resinosa natural amortigua los armónicos ásperos, logrando una calidez inigualable.</div>
+                    <div class="madera-info">Aporta graves profundos y un sustain eterno. Su textura resinosa natural amortigua los armónicos ásperos, logrando una calidez inigualable.</div>
                     <div class="madera-meta">Click para explorar</div>
                 </div>
+                <!-- Cedro -->
                 <div class="madera-card" data-wood="cedro">
+                    <img src="assets/cedro.jpg" alt="Madera de Cedro" class="madera-bg-img">
                     <div class="madera-icon">🪵</div>
                     <div class="madera-name">Cedro</div>
                     <div class="madera-desc-title">Descripción</div>
                     <div class="madera-info">Entrega una respuesta acústica inmediata y madura. Ideal para tapas armónicas de guitarras clásicas que buscan un tono dulce, íntimo y expansivo.</div>
                     <div class="madera-meta">Click para explorar</div>
                 </div>
+                <!-- Caoba -->
                 <div class="madera-card" data-wood="caoba">
+                    <img src="assets/caoba.jpg" alt="Madera de Caoba" class="madera-bg-img">
                     <div class="madera-icon">🪵</div>
                     <div class="madera-name">Caoba</div>
                     <div class="madera-desc-title">Descripción</div>
                     <div class="madera-info">Foco absoluto en frecuencias medias. Produce un sonido con garra, pegada seca y compresión natural muy valorada en el Blues y la música de raíces.</div>
                     <div class="madera-meta">Click para explorar</div>
                 </div>
+                <!-- Picea -->
                 <div class="madera-card" data-wood="picea">
+                    <img src="assets/picea.jpg" alt="Madera de Picea" class="madera-bg-img">
                     <div class="madera-icon">🪵</div>
                     <div class="madera-name">Picea</div>
                     <div class="madera-desc-title">Descripción</div>
                     <div class="madera-info">El estándar de oro para proyección. Su relación resistencia-peso es óptima, permitiendo dinámicas extremas desde el sutil rasgueo hasta el ataque fuerte.</div>
                     <div class="madera-meta">Click para explorar</div>
                 </div>
+                <!-- Nogal -->
                 <div class="madera-card" data-wood="nogal">
+                    <img src="assets/nogal.jpg" alt="Madera de Nogal" class="madera-bg-img">
                     <div class="madera-icon">🪵</div>
                     <div class="madera-name">Nogal</div>
                     <div class="madera-desc-title">Descripción</div>
@@ -108,135 +62,3 @@
             </div>
         </div>
     </section>
-
-    <section class="programas" id="programas">
-        <div class="container">
-            <div class="section-title-container reveal">
-                <h2>Programas Formativos</h2>
-            </div>
-            <div class="programas-container reveal">
-                <div class="programa-card">
-                    <span class="tag-premium">Ciclo Profesional</span>
-                    <h3>Programa Integral de Construcción de Guitarras</h3>
-                    <p>Un viaje inmersivo desde el bloque maderero en bruto hasta el lustre final de una obra de arte acústica o eléctrica.</p>
-                    <ul class="programa-details">
-                        <li><strong>Duración:</strong> 9 Meses (320 horas)</li>
-                        <li><strong>Herramientas:</strong> Set de formones a medida incluido</li>
-                        <li><strong>Nivel:</strong> Inicial a Avanzado</li>
-                    </ul>
-                    <a href="#postular" class="btn btn-outline" style="width:100%;">Solicitar Programa Académico</a>
-                </div>
-                <div class="programa-card">
-                    <span class="tag-premium">Especialización</span>
-                    <h3>Masterclass de Calibración Avanzada</h3>
-                    <p>Domina las microinteracciones entre cejuela, trastes, alma y puente para lograr una afonía perfecta y un confort de toque insuperable.</p>
-                    <ul class="programa-details">
-                        <li><strong>Duración:</strong> 3 Fines de semana (36 horas)</li>
-                        <li><strong>Herramientas:</strong> Galgas de precisión y limas de diamante</li>
-                        <li><strong>Nivel:</strong> Intermedio</li>
-                    </ul>
-                    <a href="#postular" class="btn btn-outline" style="width:100%;">Reservar Plaza de Afinación</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="herramientas" id="herramientas">
-        <div class="container">
-            <div class="section-title-container reveal">
-                <h2>El Legado de las Herramientas</h2>
-            </div>
-            <div class="herramientas-grid reveal">
-                <div class="herramientas-row">
-                    <div class="herramienta-item">
-                        <div class="herramienta-icon">🪚</div>
-                        <div class="herramienta-name">Garlopa de banco</div>
-                        <div class="herramienta-phase">Rectificación perfecta del diapasón para evitar trasteos.</div>
-                    </div>
-                    <div class="herramienta-item">
-                        <div class="herramienta-icon">✒️</div>
-                        <div class="herramienta-name">Formones Japoneses</div>
-                        <div class="herramienta-phase">Vaciado preciso de las varillas de la tapa armónica (bracing).</div>
-                    </div>
-                    <div class="herramienta-item">
-                        <div class="herramienta-icon">📐</div>
-                        <div class="herramienta-name">Calibres de precisión</div>
-                        <div class="herramienta-phase">Control micrométrico del espesor óptimo de las tapas resonantes.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-title-container reveal">
-                <h2>Claridad Absoluta</h2>
-            </div>
-            <div class="faq-container reveal">
-                <div class="faq-item">
-                    <button class="faq-trigger">
-                        <h3>¿Necesito conocimientos previos de carpintería?</h3>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>No. El programa está diseñado para guiarte desde la correcta sujeción de las herramientas manuales básicas hasta los cortes más sofisticados de la física acústica.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-trigger">
-                        <h3>¿Las maderas nobles están incluidas en la matrícula?</h3>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Sí. Cada estudiante recibe un juego premium de maderas macizas (Picea, Arce o Caoba según proyecto) estacionadas por más de 5 años.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-trigger">
-                        <h3>¿Me llevo el instrumento terminado?</h3>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Por supuesto. El instrumento es el examen final de tu proceso formativo. Te lo llevas calibrado, lustrado y listo para conciertos o grabaciones.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contacto" id="postular">
-        <div class="container">
-            <div class="contacto-layout">
-                <div class="contacto-info-panel reveal">
-                    <div class="escasez-badge">
-                        <span></span> Solo 6 bancos de trabajo por ciclo activos
-                    </div>
-                    <h2>Postula por un espacio en el taller</h2>
-                    <p class="lead">Para asegurar una tutoría uno a uno donde el maestro sigue de cerca cada milímetro de tu corte, limitamos de forma estricta las admisiones.</p>
-                    <p>Déjanos tus credenciales. Un luthier analizará tu intención formativa y te contactará en un plazo máximo de 48 horas.</p>
-                </div>
-                <div class="contacto-form-panel reveal">
-                    <form class="premium-form" id="applicationForm" onsubmit="handleFormSubmit(event)">
-                        <div class="form-group">
-                            <input type="text" id="fullname" class="form-input" placeholder=" " required>
-                            <label class="form-label" for="fullname">Nombre completo</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" class="form-input" placeholder=" " required>
-                            <label class="form-label" for="email">Email de contacto</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" class="form-input" placeholder=" " required>
-                            <label class="form-label" for="phone">Teléfono / WhatsApp</label>
-                        </div>
-                        <button type="submit" class="btn btn-solid">Enviar Solicitud de Entrevista</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
