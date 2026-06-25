@@ -135,6 +135,7 @@ header {
     min-height: 95vh; 
     display: flex; 
     align-items: center; 
+    padding-top: 120px;
 }
 
 .hero-badge { 
@@ -159,15 +160,7 @@ header {
 
 .txt-rotate { 
     color: var(--color-oro); 
-    border-right: 2px solid var(--color-oro); 
-    padding-right: 5px; 
-    animation: blink 0.75s step-end infinite; 
     transition: opacity 0.3s; 
-}
-
-@keyframes blink { 
-    from, to { border-color: transparent } 
-    50% { border-color: var(--color-oro); } 
 }
 
 .hero .subtitle { 
@@ -245,7 +238,111 @@ header {
 }
 
 /* ==========================================================================
-   CUSTOM BUILD (GRID DE 3 COLUMNAS CORREGIDO)
+   ACORDEÓN DE FLASH CARDS (MADERAS)
+   ========================================================================== */
+.maderas-grid { 
+    display: flex; 
+    gap: 1.5rem; 
+    min-height: 520px; 
+}
+
+.madera-card { 
+    flex: 1; 
+    background: var(--color-white); 
+    border-radius: 120px 120px 24px 24px; 
+    padding: 4rem 2rem; 
+    position: relative; 
+    overflow: hidden; 
+    cursor: pointer; 
+    border: 1px solid rgba(0,0,0,0.04); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    transition: var(--transition-smooth); 
+}
+
+.madera-bg-wrapper { 
+    position: absolute; 
+    inset: 0; 
+    z-index: 1; 
+    background-size: cover;
+    background-position: center;
+    transition: var(--transition-smooth); 
+    opacity: 0.15; /* Atenuado cuando no está seleccionada */
+}
+
+.madera-content { 
+    position: relative; 
+    z-index: 2; 
+    text-align: center; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    pointer-events: none; 
+}
+
+.madera-icon { 
+    font-size: 2.5rem; 
+    margin-bottom: 1.5rem; 
+}
+
+.madera-name { 
+    font-family: var(--font-serif); 
+    font-size: 1.6rem; 
+    color: var(--color-bosque); 
+    transition: color 0.3s;
+}
+
+.madera-desc-title { 
+    font-size: 0.75rem; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 0.1em; 
+    color: var(--color-oro); 
+    margin: 2rem 0 0.5rem; 
+    display: none; 
+}
+
+.madera-info { 
+    font-size: 0.9rem; 
+    color: white; 
+    max-width: 250px; 
+    line-height: 1.6; 
+    display: none; 
+}
+
+.madera-meta { 
+    margin-top: auto; 
+    font-size: 0.75rem; 
+    text-transform: uppercase; 
+    color: #777; 
+    letter-spacing: 0.05em; 
+    transition: color 0.3s;
+}
+
+/* Estado Expandido Moderno */
+.madera-card.expanded { 
+    flex: 2.5; 
+}
+
+.madera-card.expanded .madera-bg-wrapper { 
+    opacity: 1;
+    filter: brightness(0.35); /* Genera un contraste óptimo con las letras blancas */
+}
+
+.madera-card.expanded .madera-name, 
+.madera-card.expanded .madera-meta { 
+    color: white; 
+}
+
+.madera-card.expanded .madera-desc-title, 
+.madera-card.expanded .madera-info { 
+    display: block; 
+}
+
+/* ==========================================================================
+   CUSTOM BUILD (GRID REESTRUCTURADO EN COLUMNAS)
    ========================================================================== */
 .build-grid {
     display: grid;
@@ -386,181 +483,6 @@ header {
     font-size: 0.85rem; 
     font-weight: 700; 
     color: var(--color-oro); 
-}
-
-/* ==========================================================================
-   ACORDEÓN DE FLASH CARDS (MADERAS)
-   ========================================================================== */
-.maderas-grid { 
-    display: flex; 
-    gap: 1.5rem; 
-    min-height: 500px; 
-}
-
-.madera-card { 
-    flex: 1; 
-    background: var(--color-white); 
-    border-radius: 120px 120px 24px 24px; 
-    padding: 4rem 2rem; 
-    position: relative; 
-    overflow: hidden; 
-    cursor: pointer; 
-    border: 1px solid rgba(0,0,0,0.04); 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    transition: var(--transition-smooth); 
-}
-
-.madera-bg-wrapper { 
-    position: absolute; 
-    inset: 0; 
-    z-index: 1; 
-    background-size: cover;
-    background-position: center;
-    transition: var(--transition-smooth); 
-}
-
-.madera-content { 
-    position: relative; 
-    z-index: 2; 
-    text-align: center; 
-    height: 100%; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    pointer-events: none; 
-}
-
-.madera-icon { 
-    font-size: 2.5rem; 
-    margin-bottom: 1.5rem; 
-}
-
-.madera-name { 
-    font-family: var(--font-serif); 
-    font-size: 1.6rem; 
-    color: var(--color-bosque); 
-}
-
-.madera-desc-title { 
-    font-size: 0.75rem; 
-    font-weight: 700; 
-    text-transform: uppercase; 
-    letter-spacing: 0.1em; 
-    color: white; 
-    margin: 2rem 0 0.5rem; 
-    display: none; 
-}
-
-.madera-info { 
-    font-size: 0.9rem; 
-    color: white; 
-    max-width: 250px; 
-    line-height: 1.6; 
-    display: none; 
-}
-
-.madera-meta { 
-    margin-top: auto; 
-    font-size: 0.75rem; 
-    text-transform: uppercase; 
-    color: #999; 
-    letter-spacing: 0.05em; 
-}
-
-.madera-card.expanded { 
-    flex: 2.5; 
-}
-
-.madera-card.expanded .madera-bg-wrapper { 
-    background: rgba(26, 51, 30, 0.95); 
-}
-
-.madera-card.expanded .madera-name, 
-.madera-card.expanded .madera-meta { 
-    color: white; 
-}
-
-.madera-card.expanded .madera-desc-title, 
-.madera-card.expanded .madera-info { 
-    display: block; 
-}
-
-/* ==========================================================================
-   PROGRAMAS FORMATIVOS (3 CURSOS)
-   ========================================================================== */
-.programas-grid-layout { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 2rem; 
-}
-
-.programa-card { 
-    background: var(--color-white); 
-    padding: 3.5rem 2.5rem; 
-    border-radius: 24px; 
-    border: 1px solid rgba(0,0,0,0.04); 
-    display: flex; 
-    flex-direction: column; 
-    transition: var(--transition-smooth); 
-}
-
-.programa-card:hover { 
-    transform: translateY(-5px); 
-    box-shadow: 0 15px 35px rgba(26, 51, 30, 0.04); 
-}
-
-.tag-premium { 
-    font-size: 0.75rem; 
-    font-weight: 700; 
-    color: var(--color-oro); 
-    text-transform: uppercase; 
-}
-
-.programa-card h3 { 
-    font-family: var(--font-serif); 
-    font-size: 1.8rem; 
-    margin: 1rem 0; 
-    color: var(--color-bosque); 
-}
-
-.programa-card p { 
-    color: #555; 
-    font-size: 0.95rem; 
-    line-height: 1.6; 
-    margin-bottom: 2rem; 
-}
-
-.programa-details { 
-    list-style: none; 
-    margin-top: auto; 
-    margin-bottom: 2rem; 
-    border-top: 1px solid #EEE; 
-    padding-top: 1.5rem; 
-}
-
-.programa-details li { 
-    padding: 0.4rem 0; 
-    font-size: 0.9rem; 
-    color: #444; 
-}
-
-.btn-solid-card { 
-    display: block; 
-    text-align: center; 
-    background: var(--color-carbon); 
-    color: white; 
-    padding: 1rem; 
-    border-radius: 50px; 
-    text-decoration: none; 
-    font-weight: 600; 
-    font-size: 0.85rem; 
-    transition: var(--transition-smooth); 
-}
-
-.programa-card:hover .btn-solid-card { 
-    background: var(--color-oro); 
 }
 
 /* ==========================================================================
@@ -741,18 +663,22 @@ header {
 }
 
 /* ==========================================================================
-   DISEÑO RESPONSIVO (MOBILE FIRST INTERNALS)
+   DISEÑO RESPONSIVO (SOPORTE DISPOSITIVOS MÓVILES)
    ========================================================================== */
 @media (max-width: 992px) {
-    .contacto-layout, .build-grid { 
-        grid-template-columns: 1fr; 
+    .contacto-layout { 
+        flex-direction: column;
     }
     .maderas-grid { 
         flex-direction: column; 
+        min-height: auto;
     }
     .madera-card { 
         border-radius: 40px; 
         padding: 3rem 2rem; 
+    }
+    .madera-card.expanded { 
+        flex: auto; 
     }
     .img-placeholder-box { 
         height: 220px; 

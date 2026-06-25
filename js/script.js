@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. ROTACIÓN DE PALABRAS EN EL HERO
+    // 1. ROTACIÓN DE PALABRAS EN EL HERO SECTOR
     const palabras = ["Madera", "Precisión", "Tensión", "Historia"];
     let index = 0;
     const txtElement = document.getElementById('cambiar-palabra');
@@ -16,26 +16,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2800);
     }
 
-    // 2. ACORDEÓN DE MAPERAS EXÓTICAS (Optimizado para las nuevas Flash Cards)
+    // 2. INTERACCIÓN DE LAS FLASH CARDS (MADERAS EXÓTICAS)
     const maderaCards = document.querySelectorAll('.madera-card');
 
     maderaCards.forEach(card => {
         card.addEventListener('click', () => {
-            // Si el usuario hace clic en la que ya está abierta, no hacemos nada
+            // Si el usuario hace clic en una tarjeta expandida, no hace nada
             if (card.classList.contains('expanded')) return;
             
-            // Buscamos si hay otra abierta de antes y la cerramos SAFELY
+            // Remueve de forma segura la expansión de la tarjeta previa
             const actualmenteExpandida = document.querySelector('.madera-card.expanded');
             if (actualmenteExpandida) {
                 actualmenteExpandida.classList.remove('expanded');
             }
             
-            // Abrimos la tarjeta actual
+            // Añade la expansión a la tarjeta seleccionada
             card.classList.add('expanded');
         });
     });
 
-    // 3. PREGUNTAS FRECUENTES (FAQ)
+    // 3. ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
 
-                // Cerramos las demás
+                // Resetea los demás acordeones abiertos
                 faqItems.forEach(otherItem => {
                     otherItem.classList.remove('active');
                     const otherContent = otherItem.querySelector('.faq-content');
                     if (otherContent) otherContent.style.maxHeight = null;
                 });
 
-                // Si no estaba activa, la calculamos y abrimos
+                // Si no estaba activo, calcula dinámicamente el alto para la animación smooth
                 if (!isActive) {
                     item.classList.add('active');
                     content.style.maxHeight = content.scrollHeight + "px";
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. ANIMACIÓN REVEAL Y BARRAS DE PROGRESO AL HACER SCROLL
+    // 4. SISTEMA REVEAL AL HACER SCROLL & ANIMACIÓN DE BARRAS
     const revealElements = document.querySelectorAll('.reveal');
     const barFills = document.querySelectorAll('.bar-fill');
     
@@ -86,13 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Ejecución limpia inicial
+    checkScroll(); // Carga de control inicial
 });
 
-// 5. ENVÍO DEL FORMULARIO DE CONSULTA PREMIUM
+// 5. ENVÍO INTEGRADO DEL FORMULARIO PRIVADO
 function handleFormSubmit(event) {
     event.preventDefault();
     const name = document.getElementById('fullname').value;
-    alert(`Gracias por tu interés, ${name}. La solicitud conceptual de Custom Build ha sido enviada al atelier. Nos comunicaremos para agendar tu entrevista privada.`);
+    alert(`Gracias por tu interés, ${name}. Tu solicitud de Custom Build ha sido recibida en el atelier. Nos comunicaremos a la brevedad.`);
     document.getElementById('applicationForm').reset();
 }

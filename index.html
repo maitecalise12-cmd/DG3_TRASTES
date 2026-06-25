@@ -1,4 +1,105 @@
-<!-- 3. DETALLE DE SERVICIO: CUSTOM BUILD (CORREGIDO Y OPTIMIZADO) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRASTES | Lutheria de Autor</title>
+    <!-- Vinculación al archivo CSS corregido -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts para tipografías premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAV / HEADER -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">TRASTES</a>
+            <a href="#contacto" class="btn-nav">Configurar Custom Build</a>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">LUTHERIA CONTEMPORÁNEA</div>
+            <h1>Instrumentos con <br><span class="txt-rotate" id="cambiar-palabra">Madera</span></h1>
+            <p class="subtitle">Elevamos la construcción de guitarras y bajos a un plano donde la acústica orgánica y la ergonomía de autor se fusionan en piezas irrepetibles.</p>
+            <div class="hero-actions">
+                <a href="#custom-build" class="btn btn-solid">El Proceso</a>
+                <a href="#maderas" class="btn btn-outline">Ver Maderas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKER / MARQUEE INFINITO -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker-item">✦ PACIENCIA MILIMÉTRICA</div>
+            <div class="ticker-item">✦ MADERAS EXÓTICAS ESTACIONADAS</div>
+            <div class="ticker-item">✦ SONIDO DE AUTOR</div>
+            <div class="ticker-item">✦ DETALLES ESTRUCTURALES</div>
+            <!-- Duplicado para ciclo infinito continuo -->
+            <div class="ticker-item">✦ PACIENCIA MILIMÉTRICA</div>
+            <div class="ticker-item">✦ MADERAS EXÓTICAS ESTACIONADAS</div>
+            <div class="ticker-item">✦ SONIDO DE AUTOR</div>
+            <div class="ticker-item">✦ DETALLES ESTRUCTURALES</div>
+        </div>
+    </div>
+
+    <!-- 2. CATÁLOGO INTERACTIVO: FLASH CARDS DE MADERAS -->
+    <section class="maderas" id="maderas">
+        <div class="container">
+            <div class="section-title-container reveal">
+                <span class="section-tag">MATERIALES SELECCIONADOS</span>
+                <h2>Maderas de Autor</h2>
+                <p class="section-subtitle">Hacé clic en cada tarjeta para explorar la procedencia y el comportamiento acústico de nuestras piezas exóticas.</p>
+            </div>
+
+            <div class="maderas-grid">
+                <!-- Tarjeta 1 (Abierta por defecto) -->
+                <div class="madera-card expanded reveal">
+                    <!-- El contenedor de fondo maneja las imágenes de forma interna y segura -->
+                    <div class="madera-bg-wrapper" style="background-image: url('assets/ebano.jpg');"></div>
+                    <div class="madera-content">
+                        <div class="madera-icon">🪵</div>
+                        <h3 class="madera-name">Ébano Real</h3>
+                        <h4 class="madera-desc-title">Comportamiento</h4>
+                        <p class="madera-info">Aporta un ataque inmediato, agudos cristalinos y una estabilidad estructural insuperable para diapasones de alta gama.</p>
+                        <span class="madera-meta">Procedencia: África Central</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="madera-card reveal">
+                    <div class="madera-bg-wrapper" style="background-image: url('assets/caoba.jpg');"></div>
+                    <div class="madera-content">
+                        <div class="madera-icon">🍁</div>
+                        <h3 class="madera-name">Caoba de Honduras</h3>
+                        <h4 class="madera-desc-title">Comportamiento</h4>
+                        <p class="madera-info">El núcleo de los tonos cálidos. Ofrece un sustain infinito y frecuencias medias densas perfectas para cuerpos macizos.</p>
+                        <span class="madera-meta">Procedencia: Latinoamérica</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="madera-card reveal">
+                    <div class="madera-bg-wrapper" style="background-image: url('assets/koas.jpg');"></div>
+                    <div class="madera-content">
+                        <div class="madera-icon">🌿</div>
+                        <h3 class="madera-name">Koa Hawaiana</h3>
+                        <h4 class="madera-desc-title">Comportamiento</h4>
+                        <p class="madera-info">Un balance exótico perfecto entre la claridad del arce y la profundidad de la caoba, con vetas visualmente tridimensionales.</p>
+                        <span class="madera-meta">Procedencia: Oceanía</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. DETALLE DE SERVICIO: CUSTOM BUILD (GRID REESTRUCTURADO) -->
     <section class="custom-build" id="custom-build">
         <div class="container">
             <div class="section-title-container reveal">
@@ -27,7 +128,7 @@
                         <span class="build-phase">Fase 02</span>
                         <h3>Diseño Ergonómico y Tallado</h3>
                     </div>
-                    <p>El mástil se adapta milimétricamente a la fisonomía de tu mano. El uso de herramientas de corte tradicionales garantiza un control absoluto sobre el espesor y la tensión física.</p>
+                    <p>El mástil se adapta milimétricamente a la fisonomía de tu mano. El uso de herramientas de corte tradicionales garantiza un control absoluto sobre el espesor y la tensión física de la madera.</p>
                     <div class="img-placeholder-box">
                         <img src="assets/herramientas-corte.jpg" alt="Herramientas de Corte" class="build-img" onerror="this.parentElement.classList.add('no-img');">
                         <span class="placeholder-label">✦ Espacio: Precisión de Herramienta de Corte ✦</span>
@@ -40,7 +141,7 @@
                         <span class="build-phase">Fase 03</span>
                         <h3>Electrónica y Bobinado de Autor</h3>
                     </div>
-                    <p>Los micrófonos se bobinan a mano de manera individual, buscando la respuesta dinámica exacta que exige tu estilo de ejecución. Un sonido irrepetible.</p>
+                    <p>Los micrófonos se bobinan a mano de manera individual, buscando la respuesta dinámica exacta que exige tu estilo de ejecución. Un sonido irrepetible que el plástico industrial no puede replicar.</p>
                     <div class="img-placeholder-box">
                         <img src="assets/bobinado-micros.jpg" alt="Bobinado de Micrófonos" class="build-img" onerror="this.parentElement.classList.add('no-img');">
                         <span class="placeholder-label">✦ Espacio: Bobinado de Micrófonos Detalle ✦</span>
@@ -49,3 +150,95 @@
             </div>
         </div>
     </section>
+
+    <!-- 4. SECCIÓN BENEFICIOS CON BARRAS -->
+    <section class="beneficios" id="beneficios">
+        <div class="container">
+            <div class="section-title-container reveal">
+                <span class="section-tag">RENDIMIENTO DE AUTOR</span>
+                <h2>Estándares de Control</h2>
+                <p class="section-subtitle">Parámetros técnicos auditados de manera artesanal en cada entrega.</p>
+            </div>
+            <div class="beneficios-grid">
+                <div class="beneficio-card reveal">
+                    <h3>Resonancia Acústica</h3>
+                    <p>Estudio frecuencial de la madera antes de realizar los rebajes y cavidades electrónicas.</p>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="--target-width: 95%;">
+                            <span class="bar-num">95%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="beneficio-card reveal">
+                    <h3>Calibración y Tensión</h3>
+                    <p>Ajuste de la curvatura del alma interna con simulación de tensión activa de cuerdas.</p>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="--target-width: 98%;">
+                            <span class="bar-num">98%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title-container reveal">
+                <span class="section-tag">RESOLVIENDO DUDAS</span>
+                <h2>Consultas Frecuentes</h2>
+            </div>
+            <div class="faq-container reveal">
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <h3>¿Cuánto tiempo demora una construcción Custom Build?</h3>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>El proceso toma entre 4 y 6 meses. Este tiempo es indispensable para permitir el correcto asentamiento de las maderas tras los cortes físicos y el secado por capas de las lacas premium.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <h3>¿Puedo proveer mi propia madera?</h3>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Solo bajo estricta auditoría de humedad en nuestro taller. Para garantizar que el instrumento no se ratonee ni sufra torsiones con los años, la madera debe registrar valores de humedad inferiores al 8%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CONTACTO / FORMULARIO PRIVADO -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <div class="contacto-layout">
+                <div class="contacto-info-panel reveal">
+                    <div class="escasez-badge"><span></span> CUPOS DE CONSTRUCCIÓN LIMITADOS</div>
+                    <h2>Iniciá tu Legado Sónico</h2>
+                    <p class="lead">No fabricamos en serie. Diseñamos herramientas de expresión artística para músicos exigentes. Dejanos tus datos para coordinar una entrevista de diseño en el atelier.</p>
+                </div>
+                <div class="contacto-form-panel reveal">
+                    <form class="premium-form" id="applicationForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" id="fullname" class="form-input" placeholder=" " required>
+                            <label class="form-label">Nombre Completo</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-input" placeholder=" " required>
+                            <label class="form-label">Correo Electrónico</label>
+                        </div>
+                        <button type="submit" class="btn-solid-form">Solicitar Entrevista de Diseño</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vinculación al archivo JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
