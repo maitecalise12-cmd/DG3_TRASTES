@@ -3,242 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRASTES | Lutheria de Autor</title>
-    <!-- Vinculación al archivo CSS corregido -->
+    <title>TRASTES | Escuela de Luthería Premium</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Google Fonts para tipografías premium -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- NAV / HEADER -->
     <header>
-        <div class="container nav-container">
+        <div class="nav-container">
             <a href="#" class="nav-logo">TRASTES</a>
-            <a href="#contacto" class="btn-nav">Configurar Custom Build</a>
+            <div class="nav-contact">
+                <a href="#postular" class="btn-nav">Postular al Taller</a>
+            </div>
         </div>
     </header>
 
-    <!-- 1. HERO SECTION -->
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="container">
-            <div class="hero-badge">LUTHERIA CONTEMPORÁNEA</div>
-            <h1>Instrumentos con <br><span class="txt-rotate" id="cambiar-palabra">Madera</span></h1>
-            <p class="subtitle">Elevamos la construcción de guitarras y bajos a un plano donde la acústica orgánica y la ergonomía de autor se fusionan en piezas irrepetibles.</p>
-            <div class="hero-actions">
-                <a href="#custom-build" class="btn btn-solid">El Proceso</a>
-                <a href="#maderas" class="btn btn-outline">Ver Maderas</a>
+            <div class="hero-content reveal">
+                <div class="hero-badge">🪵 ESCUELA DE AUTOR</div>
+                
+                <h1>Construimos instrumentos con <span class="txt-rotate" id="cambiar-palabra">Alma</span></h1>
+                
+                <p class="subtitle">Un espacio de alta gama donde la física acústica y la materia prima orgánica se encuentran para crear piezas irrepetibles.</p>
+                
+                <div class="hero-actions">
+                    <a href="#maderas" class="btn btn-solid">Explorar Maderas</a>
+                    <a href="#programas" class="btn btn-outline">Ver Programas</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- TICKER / MARQUEE INFINITO -->
     <div class="ticker-wrap">
         <div class="ticker">
-            <div class="ticker-item">✦ PACIENCIA MILIMÉTRICA</div>
-            <div class="ticker-item">✦ MADERAS EXÓTICAS ESTACIONADAS</div>
-            <div class="ticker-item">✦ SONIDO DE AUTOR</div>
-            <div class="ticker-item">✦ DETALLES ESTRUCTURALES</div>
-            <!-- Duplicado para ciclo infinito continuo -->
-            <div class="ticker-item">✦ PACIENCIA MILIMÉTRICA</div>
-            <div class="ticker-item">✦ MADERAS EXÓTICAS ESTACIONADAS</div>
-            <div class="ticker-item">✦ SONIDO DE AUTOR</div>
-            <div class="ticker-item">✦ DETALLES ESTRUCTURALES</div>
+            <div class="ticker-item">✦ HECHO A MANO </div>
+            <div class="ticker-item">✦ MADERAS CON MAS DE 5 AÑOS DE ESTACIONAMIENTO </div>
+            <div class="ticker-item">✦ SOLO 6 BANCOS ACTIVOS </div>
+            <div class="ticker-item">✦ ATENCIÓN MILIMÉTRICA </div>
+            <div class="ticker-item">✦ CALIBRACIÓN PREMIUM </div>
+            <div class="ticker-item">✦ ACÚSTICA PERFECTA </div>
         </div>
     </div>
 
-    <!-- 2. CATÁLOGO INTERACTIVO: FLASH CARDS DE MADERAS -->
-    <section class="maderas" id="maderas">
-        <div class="container">
-            <div class="section-title-container reveal">
-                <span class="section-tag">MATERIALES SELECCIONADOS</span>
-                <h2>Maderas de Autor</h2>
-                <p class="section-subtitle">Hacé clic en cada tarjeta para explorar la procedencia y el comportamiento acústico de nuestras piezas exóticas.</p>
+    <section class="manifiesto" id="manifiesto">
+        <div class="manifiesto-layout">
+            <div class="manifiesto-col manifiesto-left">
+                <div class="reveal">
+                    <span class="section-tag">EL MANIFIESTO</span>
+                    <h2>El ritmo del árbol, la obsesión del maestro.</h2>
+                    <p>En una era dominada por la replicación industrial y la inmediatez, nosotros elegimos la lentitud consciente. Vivimos con una obsesión milimétrica, entendiendo que una décima de milímetro define el alma acústica de un instrumento.</p>
+                    <p>Aquí no vienes a ensamblar piezas prefabricadas; vienes a escuchar la arquitectura orgánica del material y a domar su tensión natural.</p>
+                </div>
             </div>
-
-            <div class="maderas-grid">
-                <!-- Tarjeta 1 (Abierta por defecto) -->
-                <div class="madera-card expanded reveal">
-                    <!-- El contenedor de fondo maneja las imágenes de forma interna y segura -->
-                    <div class="madera-bg-wrapper" style="background-image: url('assets/ebano.jpg');"></div>
-                    <div class="madera-content">
-                        <div class="madera-icon">🪵</div>
-                        <h3 class="madera-name">Ébano Real</h3>
-                        <h4 class="madera-desc-title">Comportamiento</h4>
-                        <p class="madera-info">Aporta un ataque inmediato, agudos cristalinos y una estabilidad estructural insuperable para diapasones de alta gama.</p>
-                        <span class="madera-meta">Procedencia: África Central</span>
+            <div class="manifiesto-col manifiesto-right">
+                <div class="taller-image-container">
+                    <div class="placeholder-img-label">Tu Foto del Taller Aquí (Fondo Ocupando Todo)</div>
                     </div>
-                </div>
-
-                <!-- Tarjeta 2 -->
-                <div class="madera-card reveal">
-                    <div class="madera-bg-wrapper" style="background-image: url('assets/caoba.jpg');"></div>
-                    <div class="madera-content">
-                        <div class="madera-icon">🍁</div>
-                        <h3 class="madera-name">Caoba de Honduras</h3>
-                        <h4 class="madera-desc-title">Comportamiento</h4>
-                        <p class="madera-info">El núcleo de los tonos cálidos. Ofrece un sustain infinito y frecuencias medias densas perfectas para cuerpos macizos.</p>
-                        <span class="madera-meta">Procedencia: Latinoamérica</span>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 3 -->
-                <div class="madera-card reveal">
-                    <div class="madera-bg-wrapper" style="background-image: url('assets/koas.jpg');"></div>
-                    <div class="madera-content">
-                        <div class="madera-icon">🌿</div>
-                        <h3 class="madera-name">Koa Hawaiana</h3>
-                        <h4 class="madera-desc-title">Comportamiento</h4>
-                        <p class="madera-info">Un balance exótico perfecto entre la claridad del arce y la profundidad de la caoba, con vetas visualmente tridimensionales.</p>
-                        <span class="madera-meta">Procedencia: Oceanía</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. DETALLE DE SERVICIO: CUSTOM BUILD (GRID REESTRUCTURADO) -->
-    <section class="custom-build" id="custom-build">
+    <section class="beneficios">
         <div class="container">
             <div class="section-title-container reveal">
-                <span class="section-tag">SERVICIO EXCLUSIVO</span>
-                <h2>Instrumento a Medida (Custom Build)</h2>
-                <p class="section-subtitle">El viaje de una pieza única a lo largo de meses de paciencia y precisión milimétrica.</p>
-            </div>
-
-            <div class="build-grid">
-                <!-- Fase 01 -->
-                <div class="build-card reveal">
-                    <div class="build-header">
-                        <span class="build-phase">Fase 01</span>
-                        <h3>Selección Orgánica de Materiales</h3>
-                    </div>
-                    <p>Analizamos las vetas de maderas exóticas estacionadas por años. Cada patrón visual y densidad dictará la resonancia basal de tu futuro instrumento.</p>
-                    <div class="img-placeholder-box">
-                        <img src="assets/madera-exotica.jpg" alt="Textura de Madera Exótica" class="build-img" onerror="this.parentElement.classList.add('no-img');">
-                        <span class="placeholder-label">✦ Espacio: Textura de Madera Exótica ✦</span>
-                    </div>
-                </div>
-
-                <!-- Fase 02 -->
-                <div class="build-card reveal">
-                    <div class="build-header">
-                        <span class="build-phase">Fase 02</span>
-                        <h3>Diseño Ergonómico y Tallado</h3>
-                    </div>
-                    <p>El mástil se adapta milimétricamente a la fisonomía de tu mano. El uso de herramientas de corte tradicionales garantiza un control absoluto sobre el espesor y la tensión física de la madera.</p>
-                    <div class="img-placeholder-box">
-                        <img src="assets/herramientas-corte.jpg" alt="Herramientas de Corte" class="build-img" onerror="this.parentElement.classList.add('no-img');">
-                        <span class="placeholder-label">✦ Espacio: Precisión de Herramienta de Corte ✦</span>
-                    </div>
-                </div>
-
-                <!-- Fase 03 -->
-                <div class="build-card reveal">
-                    <div class="build-header">
-                        <span class="build-phase">Fase 03</span>
-                        <h3>Electrónica y Bobinado de Autor</h3>
-                    </div>
-                    <p>Los micrófonos se bobinan a mano de manera individual, buscando la respuesta dinámica exacta que exige tu estilo de ejecución. Un sonido irrepetible que el plástico industrial no puede replicar.</p>
-                    <div class="img-placeholder-box">
-                        <img src="assets/bobinado-micros.jpg" alt="Bobinado de Micrófonos" class="build-img" onerror="this.parentElement.classList.add('no-img');">
-                        <span class="placeholder-label">✦ Espacio: Bobinado de Micrófonos Detalle ✦</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. SECCIÓN BENEFICIOS CON BARRAS -->
-    <section class="beneficios" id="beneficios">
-        <div class="container">
-            <div class="section-title-container reveal">
-                <span class="section-tag">RENDIMIENTO DE AUTOR</span>
-                <h2>Estándares de Control</h2>
-                <p class="section-subtitle">Parámetros técnicos auditados de manera artesanal en cada entrega.</p>
+                <span class="section-tag">FÍSICA ACÚSTICA</span>
+                <h2>¿Por qué un instrumento de autor cambia tu forma de tocar?</h2>
             </div>
             <div class="beneficios-grid">
                 <div class="beneficio-card reveal">
-                    <h3>Resonancia Acústica</h3>
-                    <p>Estudio frecuencial de la madera antes de realizar los rebajes y cavidades electrónicas.</p>
+                    <h3>Proyección y Volumen</h3>
+                    <p>La vibración libre de la tapa de Picea seleccionada maximiza los armónicos naturales.</p>
                     <div class="bar-container">
-                        <div class="bar-fill" style="--target-width: 95%;">
-                            <span class="bar-num">95%</span>
-                        </div>
+                        <div class="bar-fill" style="--target-width: 98%;"></div>
+                        <span class="bar-num">98%</span>
                     </div>
                 </div>
                 <div class="beneficio-card reveal">
-                    <h3>Calibración y Tensión</h3>
-                    <p>Ajuste de la curvatura del alma interna con simulación de tensión activa de cuerdas.</p>
+                    <h3>Estabilidad del Mástil</h3>
+                    <p>Arce curado de fibra lineal que resiste cambios climáticos bruscos sin curvarse.</p>
                     <div class="bar-container">
-                        <div class="bar-fill" style="--target-width: 98%;">
-                            <span class="bar-num">98%</span>
-                        </div>
+                        <div class="bar-fill" style="--target-width: 95%;"></div>
+                        <span class="bar-num">95%</span>
+                    </div>
+                </div>
+                <div class="beneficio-card reveal">
+                    <h3>Sustain Cristalino</h3>
+                    <p>El encastre perfecto de cola orgánica prolonga la nota de forma eterna.</p>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="--target-width: 100%;"></div>
+                        <span class="bar-num">100%</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. PREGUNTAS FRECUENTES (FAQ) -->
-    <section class="faq" id="faq">
+    <section class="maderas" id="maderas">
         <div class="container">
             <div class="section-title-container reveal">
-                <span class="section-tag">RESOLVIENDO DUDAS</span>
-                <h2>Consultas Frecuentes</h2>
+                <span class="section-tag">MATERIA PRIMA</span>
+                <h2>La madera que le dará identidad a tu obra</h2>
+            </div>
+            <div class="maderas-grid reveal">
+                <div class="madera-card expanded" data-wood="arce">
+                    <div class="madera-bg-wrapper">
+                        <img src="assets/arce.jpg" alt="Arce" class="madera-bg-img" onerror="this.style.display='none'">
+                    </div>
+                    <div class="madera-content">
+                        <div class="madera-icon">🍁</div>
+                        <div class="madera-name">Arce</div>
+                        <div class="madera-desc-title">Propiedades</div>
+                        <div class="madera-info">Altamente reflectivo y denso. Aporta agudos brillantes, claridad cristalina nota por nota y estabilidad legendaria.</div>
+                        <div class="madera-meta">Click para explorar</div>
+                    </div>
+                </div>
+                <div class="madera-card" data-wood="palisandro">
+                    <div class="madera-bg-wrapper">
+                        <img src="assets/palisandro.jpg" alt="Palisandro" class="madera-bg-img" onerror="this.style.display='none'">
+                    </div>
+                    <div class="madera-content">
+                        <div class="madera-icon">🪵</div>
+                        <div class="madera-name">Palisandro</div>
+                        <div class="madera-desc-title">Propiedades</div>
+                        <div class="madera-info">Aporta graves profundos y un sustain eterno. Su textura resinosa natural amortigua los armónicos ásperos.</div>
+                        <div class="madera-meta">Click para explorar</div>
+                    </div>
+                </div>
+                <div class="madera-card" data-wood="cedro">
+                    <div class="madera-bg-wrapper">
+                        <img src="assets/cedro.jpg" alt="Cedro" class="madera-bg-img" onerror="this.style.display='none'">
+                    </div>
+                    <div class="madera-content">
+                        <div class="madera-icon">🌲</div>
+                        <div class="madera-name">Cedro</div>
+                        <div class="madera-desc-title">Propiedades</div>
+                        <div class="madera-info">Entrega una respuesta acústica inmediata y madura. Ideal para tonos dulces, íntimos y expansivos.</div>
+                        <div class="madera-meta">Click para explorar</div>
+                    </div>
+                </div>
+                <div class="madera-card" data-wood="caoba">
+                    <div class="madera-bg-wrapper">
+                        <img src="assets/caoba.jpg" alt="Caoba" class="madera-bg-img" onerror="this.style.display='none'">
+                    </div>
+                    <div class="madera-content">
+                        <div class="madera-icon">🍂</div>
+                        <div class="madera-name">Caoba</div>
+                        <div class="madera-desc-title">Propiedades</div>
+                        <div class="madera-info">Foco absoluto en frecuencias medias. Sonido con garra, pegada seca y compresión natural valorada en el Blues.</div>
+                        <div class="madera-meta">Click para explorar</div>
+                    </div>
+                </div>
+                <div class="madera-card" data-wood="picea">
+                    <div class="madera-bg-wrapper">
+                        <img src="assets/picea.jpg" alt="Picea" class="madera-bg-img" onerror="this.style.display='none'">
+                    </div>
+                    <div class="madera-content">
+                        <div class="madera-icon">🌿</div>
+                        <div class="madera-name">Picea</div>
+                        <div class="madera-desc-title">Propiedades</div>
+                        <div class="madera-info">El estándar de oro para proyección. Relación resistencia-peso óptima para dinámicas extremas de rasgueo.</div>
+                        <div class="madera-meta">Click para explorar</div>
+                    </div>
+                </div>
+                <div class="madera-card" data-wood="nogal">
+                    <div class="madera-bg-wrapper">
+                        <img src="assets/nogal.jpg" alt="Nogal" class="madera-bg-img" onerror="this.style.display='none'">
+                    </div>
+                    <div class="madera-content">
+                        <div class="madera-icon">🌰</div>
+                        <div class="madera-name">Nogal</div>
+                        <div class="madera-desc-title">Propiedades</div>
+                        <div class="madera-info">Un balance tonal exquisito. Posee el brillo nítido del arce pero con una respuesta de graves que madura con los años.</div>
+                        <div class="madera-meta">Click para explorar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="programas" id="programas">
+        <div class="container">
+            <div class="section-title-container reveal">
+                <span class="section-tag">FORMACIÓN</span>
+                <h2>Conviértete en Maestro Luthier</h2>
+            </div>
+            <div class="programas-grid-layout reveal">
+                <div class="programa-card">
+                    <span class="tag-premium">Ciclo Profesional</span>
+                    <h3>Programa Integral de Construcción</h3>
+                    <p>Un viaje inmersivo desde el bloque maderero en bruto hasta el lustre final a la goma laca de tu propia guitarra.</p>
+                    <ul class="programa-details">
+                        <li><strong>Duración:</strong> 9 Meses (320 horas)</li>
+                        <li><strong>Herramientas:</strong> Set de formones japoneses incluido</li>
+                    </ul>
+                    <a href="#postular" class="btn btn-solid-card">Solicitar Programa</a>
+                </div>
+                <div class="programa-card">
+                    <span class="tag-premium">Especialización</span>
+                    <h3>Masterclass de Calibración Avanzada</h3>
+                    <p>Domina las interacciones microacústicas entre cejuela, trastes, almas y puentes para una ejecución perfecta.</p>
+                    <ul class="programa-details">
+                        <li><strong>Duración:</strong> 3 Fines de semana</li>
+                        <li><strong>Herramientas:</strong> Galgas y limas de diamante incluidas</li>
+                    </ul>
+                    <a href="#postular" class="btn btn-solid-card">Reservar Vacante</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="section-title-container reveal">
+                <span class="section-tag">RESOLVEMOS TUS DUDAS</span>
+                <h2>Claridad Absoluta</h2>
             </div>
             <div class="faq-container reveal">
                 <div class="faq-item">
                     <button class="faq-trigger">
-                        <h3>¿Cuánto tiempo demora una construcción Custom Build?</h3>
+                        <h3>¿Necesito conocimientos previos de carpintería?</h3>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-content">
-                        <p>El proceso toma entre 4 y 6 meses. Este tiempo es indispensable para permitir el correcto asentamiento de las maderas tras los cortes físicos y el secado por capas de las lacas premium.</p>
+                        <p>No, ninguno. El programa está diseñado paso a paso para guiarte desde el afilado inicial de tus herramientas hasta las leyes físicas de la proyección sonora.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-trigger">
-                        <h3>¿Puedo proveer mi propia madera?</h3>
+                        <h3>¿Las maderas están incluidas?</h3>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-content">
-                        <p>Solo bajo estricta auditoría de humedad en nuestro taller. Para garantizar que el instrumento no se ratonee ni sufra torsiones con los años, la madera debe registrar valores de humedad inferiores al 8%.</p>
+                        <p>Sí, absolutamente todas. Se te entrega un juego premium de maderas macizas curadas en nuestro taller por más de un lustro.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <h3>¿El instrumento final me pertenece?</h3>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Por supuesto. Tu guitarra construida y firmada por ti es tu tesis de graduación. Te la llevas lista para tocar en conciertos.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. CONTACTO / FORMULARIO PRIVADO -->
-    <section class="contacto" id="contacto">
+    <section class="contacto" id="postular">
         <div class="container">
             <div class="contacto-layout">
                 <div class="contacto-info-panel reveal">
-                    <div class="escasez-badge"><span></span> CUPOS DE CONSTRUCCIÓN LIMITADOS</div>
-                    <h2>Iniciá tu Legado Sónico</h2>
-                    <p class="lead">No fabricamos en serie. Diseñamos herramientas de expresión artística para músicos exigentes. Dejanos tus datos para coordinar una entrevista de diseño en el atelier.</p>
+                    <div class="escasez-badge">
+                        <span></span> Solo quedan 2 bancos de trabajo activos
+                    </div>
+                    <h2>Comienza tu legado artesanal</h2>
+                    <p class="lead">Para asegurar una tutoría personalizada donde el maestro luthier supervise cada milímetro de tu corte, limitamos estrictamente las admisiones por ciclo.</p>
                 </div>
                 <div class="contacto-form-panel reveal">
                     <form class="premium-form" id="applicationForm" onsubmit="handleFormSubmit(event)">
                         <div class="form-group">
                             <input type="text" id="fullname" class="form-input" placeholder=" " required>
-                            <label class="form-label">Nombre Completo</label>
+                            <label class="form-label">Nombre completo</label>
                         </div>
                         <div class="form-group">
                             <input type="email" id="email" class="form-input" placeholder=" " required>
-                            <label class="form-label">Correo Electrónico</label>
+                            <label class="form-label">Tu Correo Electrónico</label>
                         </div>
-                        <button type="submit" class="btn-solid-form">Solicitar Entrevista de Diseño</button>
+                        <div class="form-group">
+                            <input type="tel" id="phone" class="form-input" placeholder=" " required>
+                            <label class="form-label">Teléfono / WhatsApp</label>
+                        </div>
+                        <button type="submit" class="btn btn-solid-form">Enviar Solicitud de Ingreso</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vinculación al archivo JS -->
     <script src="js/script.js"></script>
 </body>
 </html>
