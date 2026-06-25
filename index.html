@@ -1,50 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRASTES | Luthería de Autor & Custom Build</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
-    <!-- MENÚ SUPERIOR FLOTANTE -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="nav-logo">TRASTES</a>
-            <div class="nav-contact">
-                <a href="#custom-build" class="btn-nav">Configurar Custom Build</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- 1. HERO DE ALTA GAMA -->
-    <section class="hero" id="inicio">
-        <div class="container">
-            <div class="hero-content reveal">
-                <div class="hero-badge">✦ PIEZAS IRREPETIBLES 2026</div>
-                <h1>El sonido dictado por la <span class="txt-rotate" id="cambiar-palabra">Madera</span></h1>
-                <p class="subtitle">Frente a la producción en masa, creamos instrumentos con alma para músicos de sesión y coleccionistas. Donde la veta orgánica y la tensión natural dictan una acústica única.</p>
-                <div class="hero-actions">
-                    <a href="#custom-build" class="btn btn-solid">Diseño a Medida</a>
-                    <a href="#programas" class="btn btn-outline">Masterclasses</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. MARQUEE DE OBSESIÓN MARKETING -->
-    <div class="ticker-wrap">
-        <div class="ticker">
-            <div class="ticker-item">✦ PERSONALIZACIÓN EXTREMA </div>
-            <div class="ticker-item">✦ BOBINADO DE MICRÓFONOS A MANO </div>
-            <div class="ticker-item">✦ TEXTURAS EXÓTICAS SELECCIONADAS </div>
-            <div class="ticker-item">✦ TALLADO ERGONÓMICO INDIVIDUAL </div>
-            <div class="ticker-item">✦ LUJO CONSCIENTE </div>
-        </div>
-    </div>
-
-    <!-- 3. DETALLE DE SERVICIO: CUSTOM BUILD (El nacimiento desde cero) -->
+<!-- 3. DETALLE DE SERVICIO: CUSTOM BUILD (CORREGIDO Y OPTIMIZADO) -->
     <section class="custom-build" id="custom-build">
         <div class="container">
             <div class="section-title-container reveal">
@@ -53,227 +7,45 @@
                 <p class="section-subtitle">El viaje de una pieza única a lo largo de meses de paciencia y precisión milimétrica.</p>
             </div>
 
-            <div class="timeline-custom">
-                <!-- Paso 1 -->
-                <div class="timeline-step reveal">
-                    <div class="step-meta">Fase 01</div>
-                    <div class="step-body">
+            <div class="build-grid">
+                <!-- Fase 01 -->
+                <div class="build-card reveal">
+                    <div class="build-header">
+                        <span class="build-phase">Fase 01</span>
                         <h3>Selección Orgánica de Materiales</h3>
-                        <p>Analizamos las vetas de maderas exóticas estacionadas por años. Cada patrón visual y densidad dictará la resonancia basal de tu futuro instrumento.</p>
-                        <div class="img-placeholder-box">
-                            <span>[ Espacio: Textura de Madera Exótica de Cerca ]</span>
-                        </div>
+                    </div>
+                    <p>Analizamos las vetas de maderas exóticas estacionadas por años. Cada patrón visual y densidad dictará la resonancia basal de tu futuro instrumento.</p>
+                    <div class="img-placeholder-box">
+                        <img src="assets/madera-exotica.jpg" alt="Textura de Madera Exótica" class="build-img" onerror="this.parentElement.classList.add('no-img');">
+                        <span class="placeholder-label">✦ Espacio: Textura de Madera Exótica ✦</span>
                     </div>
                 </div>
 
-                <!-- Paso 2 -->
-                <div class="timeline-step reveal">
-                    <div class="step-meta">Fase 02</div>
-                    <div class="step-body">
+                <!-- Fase 02 -->
+                <div class="build-card reveal">
+                    <div class="build-header">
+                        <span class="build-phase">Fase 02</span>
                         <h3>Diseño Ergonómico y Tallado</h3>
-                        <p>El mástil se adapta milimétricamente a la fisonomía de tu mano. El uso de herramientas de corte tradicionales garantiza un control absoluto sobre el espesor y la tensión física de la madera.</p>
-                        <div class="img-placeholder-box">
-                            <span>[ Espacio: Precisión de Herramienta de Corte / Formón ]</span>
-                        </div>
+                    </div>
+                    <p>El mástil se adapta milimétricamente a la fisonomía de tu mano. El uso de herramientas de corte tradicionales garantiza un control absoluto sobre el espesor y la tensión física.</p>
+                    <div class="img-placeholder-box">
+                        <img src="assets/herramientas-corte.jpg" alt="Herramientas de Corte" class="build-img" onerror="this.parentElement.classList.add('no-img');">
+                        <span class="placeholder-label">✦ Espacio: Precisión de Herramienta de Corte ✦</span>
                     </div>
                 </div>
 
-                <!-- Paso 3 -->
-                <div class="timeline-step reveal">
-                    <div class="step-meta">Fase 03</div>
-                    <div class="step-body">
+                <!-- Fase 03 -->
+                <div class="build-card reveal">
+                    <div class="build-header">
+                        <span class="build-phase">Fase 03</span>
                         <h3>Electrónica y Bobinado de Autor</h3>
-                        <p>Los micrófonos se bobinan a mano de manera individual, buscando la respuesta dinámica exacta que exige tu estilo de ejecución. Un sonido irrepetible que el plástico industrial no puede replicar.</p>
-                        <div class="img-placeholder-box">
-                            <span>[ Espacio: Bobinado de Micrófonos Detalle ]</span>
-                        </div>
+                    </div>
+                    <p>Los micrófonos se bobinan a mano de manera individual, buscando la respuesta dinámica exacta que exige tu estilo de ejecución. Un sonido irrepetible.</p>
+                    <div class="img-placeholder-box">
+                        <img src="assets/bobinado-micros.jpg" alt="Bobinado de Micrófonos" class="build-img" onerror="this.parentElement.classList.add('no-img');">
+                        <span class="placeholder-label">✦ Espacio: Bobinado de Micrófonos Detalle ✦</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- 4. BENEFICIOS MEDIBLES -->
-    <section class="beneficios">
-        <div class="container">
-            <div class="section-title-container reveal">
-                <span class="section-tag">EL VALOR DEL TIEMPO</span>
-                <h2>Ingeniería Acústica Sin Concesiones</h2>
-            </div>
-            <div class="beneficios-grid">
-                <div class="beneficio-card reveal">
-                    <h3>Fidelidad Dinámica</h3>
-                    <p>Respuesta inmediata al tacto y ataque de la púa debido al encastre molecular de las maderas.</p>
-                    <div class="bar-container">
-                        <div class="bar-fill" style="--target-width: 99%;"></div>
-                        <span class="bar-num">99%</span>
-                    </div>
-                </div>
-                <div class="beneficio-card reveal">
-                    <h3>Ergonomía de Sesión</h3>
-                    <p>Mástiles pulidos que reducen la fatiga muscular durante jornadas extensas en el estudio.</p>
-                    <div class="bar-container">
-                        <div class="bar-fill" style="--target-width: 96%;"></div>
-                        <span class="bar-num">96%</span>
-                    </div>
-                </div>
-                <div class="beneficio-card reveal">
-                    <h3>Exclusividad Certificada</h3>
-                    <p>Cada instrumento se entrega con un libro de bitácora fotográfica de su construcción.</p>
-                    <div class="bar-container">
-                        <div class="bar-fill" style="--target-width: 100%;"></div>
-                        <span class="bar-num">100%</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. CATÁLOGO INTERACTIVO DE MADERAS -->
-    <section class="maderas" id="maderas">
-        <div class="container">
-            <div class="section-title-container reveal">
-                <span class="section-tag">TEXTURAS EXÓTICAS</span>
-                <h2>El Catálogo de Materiales</h2>
-            </div>
-            <div class="maderas-grid reveal">
-                <div class="madera-card expanded" data-wood="arce">
-                    <div class="madera-bg-wrapper"></div>
-                    <div class="madera-content">
-                        <div class="madera-icon">🍁</div>
-                        <div class="madera-name">Arce Flameado</div>
-                        <div class="madera-desc-title">Acústica</div>
-                        <div class="madera-info">Estética ultra premium con ondas tridimensionales. Entrega un brillo cristalino ideal para notas definidas en el estudio.</div>
-                        <div class="madera-meta">Click para alternar</div>
-                    </div>
-                </div>
-                <div class="madera-card" data-wood="palisandro">
-                    <div class="madera-bg-wrapper"></div>
-                    <div class="madera-content">
-                        <div class="madera-icon">🪵</div>
-                        <div class="madera-name">Palisandro de la India</div>
-                        <div class="madera-desc-title">Acústica</div>
-                        <div class="madera-info">Oscuro, aceitoso y sofisticado. Ofrece un sustain eterno y graves aterciopelados muy buscados por coleccionistas.</div>
-                        <div class="madera-meta">Click para alternar</div>
-                    </div>
-                </div>
-                <div class="madera-card" data-wood="ebano">
-                    <div class="madera-bg-wrapper"></div>
-                    <div class="madera-content">
-                        <div class="madera-icon">🖤</div>
-                        <div class="madera-name">Ébano de Gabón</div>
-                        <div class="madera-desc-title">Acústica</div>
-                        <div class="madera-info">Densidad extrema y color negro profundo. Aporta un ataque percusivo inigualable y una superficie de toque suave como el vidrio.</div>
-                        <div class="madera-meta">Click para alternar</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. PROGRAMAS FORMATIVOS (AHORA 3 CURSOS) -->
-    <section class="programas" id="programas">
-        <div class="container">
-            <div class="section-title-container reveal">
-                <span class="section-tag">EL TALLER DE APRENDIZAJE</span>
-                <h2>Formación de Alta Gama</h2>
-            </div>
-            <div class="programas-grid-layout reveal">
-                <!-- Curso 1 -->
-                <div class="programa-card">
-                    <span class="tag-premium">01 / Masterpiece</span>
-                    <h3>Construcción Integral Custom</h3>
-                    <p>Crea un instrumento de autor desde el bloque en bruto hasta la calibración final del circuito.</p>
-                    <ul class="programa-details">
-                        <li><strong>Dedicación:</strong> 9 Meses intensivos</li>
-                        <li><strong>Cupos:</strong> Solo 3 bancos disponibles</li>
-                    </ul>
-                    <a href="#postular" class="btn btn-solid-card">Postular al Banco</a>
-                </div>
-                <!-- Curso 2 -->
-                <div class="programa-card">
-                    <span class="tag-premium">02 / Microacústica</span>
-                    <h3>Calibración y Setup de Élite</h3>
-                    <p>Entiende la física detrás del alma, la cejuela de hueso tallada a mano y el nivelado micrométrico de trastes.</p>
-                    <ul class="programa-details">
-                        <li><strong>Dedicación:</strong> 3 Workshops intensivos</li>
-                        <li><strong>Orientación:</strong> Técnicos de gira y músicos</li>
-                    </ul>
-                    <a href="#postular" class="btn btn-solid-card">Reservar Entrada</a>
-                </div>
-                <!-- Curso 3 (Nuevo Curso del Brief) -->
-                <div class="programa-card">
-                    <span class="tag-premium">03 / Electrónica</span>
-                    <h3>Diseño y Bobinado de Pickups</h3>
-                    <p>Sumergite en la creación de micrófonos boutique. Aprendé a calcular vueltas, dominar imanes Alnico y esculpir frecuencias de audio puras.</p>
-                    <ul class="programa-details">
-                        <li><strong>Dedicación:</strong> 1 Mes de especialización</li>
-                        <li><strong>Materiales:</strong> Componentes premium incluidos</li>
-                    </ul>
-                    <a href="#postular" class="btn btn-solid-card">Solicitar Admisión</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. PREGUNTAS FRECUENTES -->
-    <section class="faq">
-        <div class="container">
-            <div class="section-title-container reveal">
-                <span class="section-tag">CONSULTAS EXCLUSIVAS</span>
-                <h2>Preguntas Frecuentes</h2>
-            </div>
-            <div class="faq-container reveal">
-                <div class="faq-item">
-                    <button class="faq-trigger">
-                        <h3>¿Cuánto tiempo demora un proceso Custom Build?</h3>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>La creación de un instrumento a medida demora entre 4 y 6 meses. Este tiempo es indispensable para respetar el asentamiento natural de las maderas tras los cortes de precisión.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-trigger">
-                        <h3>¿Puedo seleccionar personalmente los bloques de madera?</h3>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <p>Sí. Coordinamos una sesión privada en nuestro taller para que puedas evaluar visual y táctilmente las texturas de las maderas exóticas antes de realizar el primer corte.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. CONTACTO / LISTA DE ESPERA -->
-    <section class="contacto" id="postular">
-        <div class="container">
-            <div class="contacto-layout">
-                <div class="contacto-info-panel reveal">
-                    <div class="escasez-badge">
-                        <span></span> Lista de espera abierta para proyectos 2026
-                    </div>
-                    <h2>Encargá una pieza con alma</h2>
-                    <p class="lead">Iniciá la entrevista conceptual con el maestro luthier. Definiremos tu perfil ergonómico, tus búsquedas tímbricas y daremos vida a una herramienta artística irrepetible.</p>
-                </div>
-                <div class="contacto-form-panel reveal">
-                    <form class="premium-form" id="applicationForm" onsubmit="handleFormSubmit(event)">
-                        <div class="form-group">
-                            <input type="text" id="fullname" class="form-input" placeholder=" " required>
-                            <label class="form-label">Tu Nombre</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" class="form-input" placeholder=" " required>
-                            <label class="form-label">Email de contacto</label>
-                        </div>
-                        <button type="submit" class="btn btn-solid-form">Iniciar Consulta de Diseño</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="js/script.js"></script>
-</body>
-</html>

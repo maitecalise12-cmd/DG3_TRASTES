@@ -5,24 +5,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let index = 0;
     const txtElement = document.getElementById('cambiar-palabra');
 
-    setInterval(() => {
-        index = (index + 1) % palabras.length;
-        if(txtElement) {
+    if (txtElement) {
+        setInterval(() => {
+            index = (index + 1) % palabras.length;
             txtElement.style.opacity = 0;
             setTimeout(() => {
                 txtElement.textContent = palabras[index];
                 txtElement.style.opacity = 1;
             }, 300);
-        }
-    }, 2800);
+        }, 2800);
+    }
 
-    // 2. ACORDEÓN DE MADERAS EXÓTICAS
+    // 2. ACORDEÓN DE MAPERAS EXÓTICAS (Optimizado para las nuevas Flash Cards)
     const maderaCards = document.querySelectorAll('.madera-card');
 
     maderaCards.forEach(card => {
         card.addEventListener('click', () => {
+            // Si el usuario hace clic en la que ya está abierta, no hacemos nada
             if (card.classList.contains('expanded')) return;
-            document.querySelector('.madera-card.expanded')?.classList.remove('expanded');
+            
+            // Buscamos si hay otra abierta de antes y la cerramos SAFELY
+            const actualmenteExpandida = document.querySelector('.madera-card.expanded');
+            if (actualmenteExpandida) {
+                actualmenteExpandida.classList.remove('expanded');
+            }
+            
+            // Abrimos la tarjeta actual
             card.classList.add('expanded');
         });
     });
@@ -34,19 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const trigger = item.querySelector('.faq-trigger');
         const content = item.querySelector('.faq-content');
 
-        trigger.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
+        if (trigger && content) {
+            trigger.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
 
-            faqItems.forEach(otherItem => {
-                otherItem.classList.remove('active');
-                otherItem.querySelector('.faq-content').style.maxHeight = null;
+                // Cerramos las demás
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    const otherContent = otherItem.querySelector('.faq-content');
+                    if (otherContent) otherContent.style.maxHeight = null;
+                });
+
+                // Si no estaba activa, la calculamos y abrimos
+                if (!isActive) {
+                    item.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
             });
-
-            if (!isActive) {
-                item.classList.add('active');
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-        });
+        }
     });
 
     // 4. ANIMACIÓN REVEAL Y BARRAS DE PROGRESO AL HACER SCROLL
@@ -73,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', checkScroll);
-    checkScroll();
+    checkScroll(); // Ejecución limpia inicial
 });
 
 // 5. ENVÍO DEL FORMULARIO DE CONSULTA PREMIUM
