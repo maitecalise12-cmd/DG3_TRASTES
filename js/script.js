@@ -1,22 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. SELECTOR INTERACTIVO DE MADERAS (Acordeón)
+    // 1. ROTACIÓN DE PALABRAS DINÁMICAS EN EL HERO (Estilo Marketinero)
+    const palabras = ["Alma", "Historia", "Precisión", "Mística"];
+    let index = 0;
+    const txtElement = document.getElementById('cambiar-palabra');
+
+    setInterval(() => {
+        index = (index + 1) % palabras.length;
+        if(txtElement) {
+            txtElement.style.opacity = 0; // Transición sutil
+            setTimeout(() => {
+                txtElement.textContent = palabras[index];
+                txtElement.style.opacity = 1;
+            }, 300);
+        }
+    }, 2500);
+
+
+    // 2. INTERACCIÓN DE TARJETAS DE MADERAS (Acordeón)
     const maderaCards = document.querySelectorAll('.madera-card');
 
     maderaCards.forEach(card => {
         card.addEventListener('click', () => {
-            // Si la tarjeta ya está expandida, no hacemos nada
             if (card.classList.contains('expanded')) return;
-
-            // Quitamos la clase 'expanded' de la tarjeta que la tenga actualmente
             document.querySelector('.madera-card.expanded')?.classList.remove('expanded');
-
-            // Le agregamos la clase 'expanded' a la tarjeta que recibió el clic
             card.classList.add('expanded');
         });
     });
 
-    // 2. PREGUNTAS FRECUENTES (FAQ)
+
+    // 3. PREGUNTAS FRECUENTES (FAQ)
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
@@ -26,13 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
         trigger.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
 
-            // Cerramos cualquier otra pregunta abierta
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
                 otherItem.querySelector('.faq-content').style.maxHeight = null;
             });
 
-            // Si la que clickeamos no estaba activa, la abrimos calculando su altura
             if (!isActive) {
                 item.classList.add('active');
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -40,33 +51,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. EFECTO REVEAL (Aparición suave al hacer scroll)
+
+    // 4. ANIMACIÓN DE ENTRADA (Reveal) Y ANIMACIÓN DE BARRAS DE PROGRESO
     const revealElements = document.querySelectorAll('.reveal');
+    const barFills = document.querySelectorAll('.bar-fill');
     
-    const revealOnScroll = () => {
+    const checkScroll = () => {
         const triggerBottom = window.innerHeight * 0.85;
 
+        // Revelar Secciones
         revealElements.forEach(el => {
             const elTop = el.getBoundingClientRect().top;
             if (elTop < triggerBottom) {
                 el.classList.add('active');
             }
         });
+
+        // Cargar Barras de Progreso Dinámicamente cuando entran en pantalla
+        barFills.forEach(bar => {
+            const barTop = bar.getBoundingClientRect().top;
+            if (barTop < triggerBottom) {
+                const width = bar.style.getPropertyValue('--target-width');
+                bar.style.width = width;
+            }
+        });
     };
 
-    // Ejecutar al cargar la página y al hacer scroll
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Activa los elementos que ya están visibles al inicio
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Ejecución inicial
 });
 
-// 4. CONTROL DEL FORMULARIO DE CONTACTO
+// 5. ENVÍO DE FORMULARIO CON POP-UP PREMIUM
 function handleFormSubmit(event) {
     event.preventDefault();
-    
     const name = document.getElementById('fullname').value;
-    
-    // Simulación premium de envío exitoso
-    alert(`Gracias ${name}. Tu postulación ha sido recibida en el taller. Un luthier se contactará contigo en las próximas 48 horas.`);
-    
+    alert(`Estimado/a ${name}, tu postulación para un banco en el taller ha sido registrada con éxito. Un luthier evaluará tus datos y te contactará en un plazo máximo de 48 horas.`);
     document.getElementById('applicationForm').reset();
 }
