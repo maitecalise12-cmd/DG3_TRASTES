@@ -1,0 +1,386 @@
+/* VARIABLES Y RESET */
+:root {
+    --cream: #F1EAD7;
+    --orange: #B94B22;
+    --gold: #CEAD59;
+    --mahogany: #5E2422;
+    --black: #121212;
+    --slate: #93ADC6;
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--cream);
+    color: var(--black);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--mahogany);
+}
+
+.text-gold { color: var(--gold); }
+.text-light { color: var(--cream); }
+.text-mahogany { color: var(--mahogany); }
+.text-slate { color: var(--slate); }
+.bg-dark { background-color: var(--black); }
+.bg-cream { background-color: var(--cream); }
+
+/* UTILIDADES DE ANIMACIÓN (SCROLL) */
+.section-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.section-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 1. HERO */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Simulación de atardecer inmersivo (reemplazar con imagen real si se desea) */
+    background: linear-gradient(to bottom, #d8ab84 0%, var(--orange) 60%, var(--black) 100%);
+    color: var(--cream);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0) 20%, rgba(0,0,0,0.6) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    margin-bottom: 3rem;
+    color: var(--mahogany);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.cta-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    color: var(--cream);
+    border: 1px solid var(--cream);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all 0.4s ease;
+}
+
+.cta-primary:hover {
+    background-color: var(--cream);
+    color: var(--mahogany);
+}
+
+/* 2 & 5. LAYOUT ASIMÉTRICO */
+.layout-asymmetric {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.layout-asymmetric.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-box, .image-box {
+    flex: 1;
+}
+
+.image-placeholder-taller, .image-placeholder-lacado {
+    height: 500px;
+    background-color: var(--slate); /* Placeholder color */
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* 3. CONTRASTE (LUTHERÍA VS SERIE) */
+.comparison-grid {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.col-luthier, .col-serie {
+    flex: 1;
+    padding: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.col-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.comparison-grid ul {
+    list-style: none;
+}
+
+.comparison-grid li {
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.comparison-grid li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+}
+
+/* 4. TARJETAS DE MADERA (FLIP CARDS) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.flip-card {
+    background-color: transparent;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.flip-card-front {
+    background-color: var(--mahogany);
+    color: var(--cream);
+    align-items: center;
+}
+
+.flip-card-front h4 { font-size: 1.5rem; }
+
+.flip-card-back {
+    background-color: var(--orange);
+    color: var(--cream);
+    transform: rotateY(180deg);
+    text-align: left;
+}
+
+.flip-card-back h4 {
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+/* 6. ROADMAP */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--gold);
+    z-index: 0;
+}
+
+.step {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.step-number {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--cream);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.step h4 { margin-bottom: 0.5rem; }
+.step p { font-size: 0.9rem; color: #555; }
+
+/* 7. FORMULARIO APLICACIÓN */
+.form-container {
+    max-width: 700px;
+    text-align: center;
+}
+
+.scarcity-text {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.luxury-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 2rem;
+}
+
+.input-group label {
+    display: block;
+    color: var(--slate);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--gold);
+}
+
+.cta-submit {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: var(--mahogany);
+    color: var(--cream);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.cta-submit:hover {
+    background-color: var(--orange);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .layout-asymmetric, .layout-asymmetric.reverse {
+        flex-direction: column;
+    }
+    .comparison-grid {
+        flex-direction: column;
+    }
+    .timeline {
+        flex-direction: column;
+    }
+    .timeline::before {
+        width: 1px;
+        height: 100%;
+        left: 25px;
+        top: 0;
+    }
+    .step {
+        display: flex;
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    .step-number {
+        flex-shrink: 0;
+        margin-right: 1.5rem;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
