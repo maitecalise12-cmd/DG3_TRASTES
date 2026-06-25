@@ -1,23 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. ROTACIÓN DE PALABRAS DINÁMICAS EN EL HERO (Estilo Marketinero)
-    const palabras = ["Alma", "Historia", "Precisión", "Mística"];
+    // 1. ROTACIÓN DE PALABRAS EN EL HERO
+    const palabras = ["Madera", "Precisión", "Tensión", "Historia"];
     let index = 0;
     const txtElement = document.getElementById('cambiar-palabra');
 
     setInterval(() => {
         index = (index + 1) % palabras.length;
         if(txtElement) {
-            txtElement.style.opacity = 0; // Transición sutil
+            txtElement.style.opacity = 0;
             setTimeout(() => {
                 txtElement.textContent = palabras[index];
                 txtElement.style.opacity = 1;
             }, 300);
         }
-    }, 2500);
+    }, 2800);
 
-
-    // 2. INTERACCIÓN DE TARJETAS DE MADERAS (Acordeón)
+    // 2. ACORDEÓN DE MADERAS EXÓTICAS
     const maderaCards = document.querySelectorAll('.madera-card');
 
     maderaCards.forEach(card => {
@@ -27,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('expanded');
         });
     });
-
 
     // 3. PREGUNTAS FRECUENTES (FAQ)
     const faqItems = document.querySelectorAll('.faq-item');
@@ -51,15 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-    // 4. ANIMACIÓN DE ENTRADA (Reveal) Y ANIMACIÓN DE BARRAS DE PROGRESO
+    // 4. ANIMACIÓN REVEAL Y BARRAS DE PROGRESO AL HACER SCROLL
     const revealElements = document.querySelectorAll('.reveal');
     const barFills = document.querySelectorAll('.bar-fill');
     
     const checkScroll = () => {
-        const triggerBottom = window.innerHeight * 0.85;
+        const triggerBottom = window.innerHeight * 0.88;
 
-        // Revelar Secciones
         revealElements.forEach(el => {
             const elTop = el.getBoundingClientRect().top;
             if (elTop < triggerBottom) {
@@ -67,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Cargar Barras de Progreso Dinámicamente cuando entran en pantalla
         barFills.forEach(bar => {
             const barTop = bar.getBoundingClientRect().top;
             if (barTop < triggerBottom) {
@@ -78,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Ejecución inicial
+    checkScroll();
 });
 
-// 5. ENVÍO DE FORMULARIO CON POP-UP PREMIUM
+// 5. ENVÍO DEL FORMULARIO DE CONSULTA PREMIUM
 function handleFormSubmit(event) {
     event.preventDefault();
     const name = document.getElementById('fullname').value;
-    alert(`Estimado/a ${name}, tu postulación para un banco en el taller ha sido registrada con éxito. Un luthier evaluará tus datos y te contactará en un plazo máximo de 48 horas.`);
+    alert(`Gracias por tu interés, ${name}. La solicitud conceptual de Custom Build ha sido enviada al atelier. Nos comunicaremos para agendar tu entrevista privada.`);
     document.getElementById('applicationForm').reset();
 }
