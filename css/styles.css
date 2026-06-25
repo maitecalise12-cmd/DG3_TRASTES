@@ -1,0 +1,19 @@
+:root{--cream:#F1EAD7;--orange:#B94B22;--gold:#CEAD59;--black:#0e0e0e;}
+*{margin:0;padding:0;box-sizing:border-box} body{background:var(--cream);font-family:Inter,sans-serif;overflow-x:hidden}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.05;background-image:url('https://www.transparenttextures.com/patterns/noise.png');z-index:999}
+.cursor-glow{position:fixed;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle, rgba(185,75,34,.18), transparent 70%);pointer-events:none;z-index:998;transform:translate(-50%,-50%)}
+.navbar{position:fixed;width:100%;display:flex;justify-content:center;padding:30px;color:white;z-index:1000}
+.logo{font-family:'Playfair Display';font-size:48px}
+.hero{height:100vh;background:url('../hero.jpg') center/cover no-repeat;position:relative;display:flex;justify-content:center;align-items:center;text-align:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,.15))}
+.hero-content{position:relative;color:white;max-width:900px;padding:40px}
+.availability{color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:25px}
+h1{font-family:'Playfair Display';font-size:84px;line-height:1}
+h1 span{font-style:italic;color:var(--gold)}
+.hero-copy{font-size:22px;max-width:700px;margin:25px auto 35px}
+.hero-buttons{display:flex;justify-content:center;gap:20px}
+button{padding:18px 32px;border:none;cursor:pointer}
+.primary{background:var(--orange);color:white}.secondary{background:transparent;border:1px solid white;color:white}
+.sun-glow{position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(120px);background:rgba(255,170,70,.18);animation:pulse 5s infinite}
+@keyframes pulse{50%{transform:scale(1.1);opacity:.7}}
+@media(max-width:900px){h1{font-size:50px}.hero-buttons{flex-direction:column}}
